@@ -3,6 +3,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AkzidenzGrotesk-Cond.otf">
+            <string>AkzidenzGroteskBQ-Cnd</string>
+            <string>AkzidenzGroteskBQ-Cnd</string>
+            <string>AkzidenzGroteskBQ-Cnd</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,21 +30,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY4-h3-Oza">
-                                <rect key="frame" x="0.0" y="252.5" width="375" height="101.5"/>
-                                <color key="backgroundColor" red="0.027450980392156862" green="0.70196078431372544" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Iniciar Jogo">
-                                    <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vxr-VT-eJg" kind="show" id="Cxm-4W-DoY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-i0-4wj">
                                 <rect key="frame" x="0.0" y="353" width="375" height="101.5"/>
                                 <color key="backgroundColor" red="0.023529411764705882" green="0.58039215686274515" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Iniciar Jogo">
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="70"/>
+                                <state key="normal" title="Leaderboards">
                                     <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,7 +42,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWB-cW-0nx">
                                 <rect key="frame" x="0.0" y="453" width="375" height="101.5"/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.50196078431372548" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Iniciar Jogo">
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="70"/>
+                                <state key="normal" title="About">
                                     <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -59,6 +57,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="world search-05" translatesAutoresizingMaskIntoConstraints="NO" id="Qpn-zg-0SZ">
                                 <rect key="frame" x="108" y="72" width="158" height="158"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY4-h3-Oza">
+                                <rect key="frame" x="0.0" y="252" width="375" height="101.5"/>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.70196078431372544" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="70"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vxr-VT-eJg" kind="show" id="Cxm-4W-DoY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
