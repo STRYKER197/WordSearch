@@ -9,6 +9,7 @@
 #import "MapaViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "SCLAlertView.h"
+#import "CustomAnnotation.h"
 
 
 @interface MapaViewController ()
@@ -30,7 +31,7 @@ CLLocation *loc;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
-        paisesArray = @[@"Brasil", @"Estados Unidos", @"Argentina"];
+        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina"];
     } else {
         paisesArray = @[@"Brazil", @"United States", @"Argentina"];
     }
@@ -188,30 +189,30 @@ CLLocation *loc;
 //MARK: Métodos dos pinos(Annotations)
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    int r = arc4random_uniform(3);
     MKPinAnnotationView *pinView = (MKPinAnnotationView *) [self.mapKit dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
     if (!pinView) {
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
         
         //Cor aleatoria de pinos
         
-        switch (r) {
-            case 1:
-                pinView.pinColor = MKPinAnnotationColorGreen;
-                break;
-            case 2:
-                pinView.pinColor = MKPinAnnotationColorPurple;
-                break;
-            case 3:
-                pinView.pinColor = MKPinAnnotationColorRed;
-                break;
-                
-            default:
-                pinView.pinColor = MKPinAnnotationColorRed;
-                break;
-        }
+//        switch (r) {
+//            case 1:
+//                pinView.pinColor = MKPinAnnotationColorGreen;
+//                break;
+//            case 2:
+//                pinView.pinColor = MKPinAnnotationColorPurple;
+//                break;
+//            case 3:
+//                pinView.pinColor = MKPinAnnotationColorRed;
+//                break;
+//                
+//            default:
+//                pinView.pinColor = MKPinAnnotationColorRed;
+//                break;
+//        }
         pinView.animatesDrop = YES;
         pinView.canShowCallout = YES;
+        pinView.image = [UIImage imageNamed:@"acerto.png"];
         UIButton *btPin = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         pinView.rightCalloutAccessoryView = btPin;
     } else {
@@ -220,6 +221,22 @@ CLLocation *loc;
     }
     return pinView;
 }
+
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+//{
+//    if ([annotation isKindOfClass:[CustomAnnotation class]]) {
+//        CustomAnnotation *myLocation = (CustomAnnotation *)annotation;
+//        MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MyCustomAnnotation"];
+//        if (annotationView == nil) {
+//            annotationView = myLocation.annotationView;
+//        } else {
+//            annotationView.annotation = annotation;
+//        }
+//        return annotationView;
+//    } else {
+//        return nil;
+//    }
+//}
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     //Clicou no botão da view
