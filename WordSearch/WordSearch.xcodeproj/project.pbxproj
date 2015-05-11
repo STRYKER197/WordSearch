@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
+		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
+		F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */; };
+		F6E687AB1B01334D006D3FAE /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A41B01334D006D3FAE /* SCLButton.m */; };
+		F6E687AC1B01334D006D3FAE /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A71B01334D006D3FAE /* UIImage+ImageEffects.m */; };
 		F6E7005C1AFD373C00A48FD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E7005B1AFD373C00A48FD3 /* main.m */; };
 		F6E7005F1AFD373C00A48FD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */; };
 		F6E700621AFD373C00A48FD3 /* WordSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6E700601AFD373C00A48FD3 /* WordSearch.xcdatamodeld */; };
@@ -15,6 +20,9 @@
 		F6E7006A1AFD373C00A48FD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E700691AFD373C00A48FD3 /* Images.xcassets */; };
 		F6E7006D1AFD373C00A48FD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E7006B1AFD373C00A48FD3 /* LaunchScreen.xib */; };
 		F6E700791AFD373C00A48FD3 /* WordSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E700781AFD373C00A48FD3 /* WordSearchTests.m */; };
+		F6E700831AFD38C600A48FD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E700821AFD38C600A48FD3 /* MapKit.framework */; };
+		F6E700851AFD38CC00A48FD3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E700841AFD38CC00A48FD3 /* CoreLocation.framework */; };
+		F6E7008A1AFD3ACE00A48FD3 /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E700891AFD3ACE00A48FD3 /* MapaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
+		F6E6879E1B01334D006D3FAE /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
+		F6E6879F1B01334D006D3FAE /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		F6E687A11B01334D006D3FAE /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		F6E687A31B01334D006D3FAE /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
+		F6E687A41B01334D006D3FAE /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
+		F6E687A51B01334D006D3FAE /* SCLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLMacros.h; sourceTree = "<group>"; };
+		F6E687A61B01334D006D3FAE /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		F6E687A71B01334D006D3FAE /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		F6E700561AFD373C00A48FD3 /* WordSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E7005A1AFD373C00A48FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E7005B1AFD373C00A48FD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +61,10 @@
 		F6E700721AFD373C00A48FD3 /* WordSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E700771AFD373C00A48FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E700781AFD373C00A48FD3 /* WordSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordSearchTests.m; sourceTree = "<group>"; };
+		F6E700821AFD38C600A48FD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F6E700841AFD38CC00A48FD3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F6E700881AFD3ACE00A48FD3 /* MapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaViewController.h; sourceTree = "<group>"; };
+		F6E700891AFD3ACE00A48FD3 /* MapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E700851AFD38CC00A48FD3 /* CoreLocation.framework in Frameworks */,
+				F6E700831AFD38C600A48FD3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +87,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6E6879C1B013301006D3FAE /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6879D1B01334D006D3FAE /* SCLAlertView.h */,
+				F6E6879E1B01334D006D3FAE /* SCLAlertView.m */,
+				F6E6879F1B01334D006D3FAE /* SCLAlertViewResponder.h */,
+				F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */,
+				F6E687A11B01334D006D3FAE /* SCLAlertViewStyleKit.h */,
+				F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */,
+				F6E687A31B01334D006D3FAE /* SCLButton.h */,
+				F6E687A41B01334D006D3FAE /* SCLButton.m */,
+				F6E687A51B01334D006D3FAE /* SCLMacros.h */,
+				F6E687A61B01334D006D3FAE /* UIImage+ImageEffects.h */,
+				F6E687A71B01334D006D3FAE /* UIImage+ImageEffects.m */,
+			);
+			name = SCLAlertView;
+			sourceTree = "<group>";
+		};
 		F6E7004D1AFD373C00A48FD3 = {
 			isa = PBXGroup;
 			children = (
+				F6E700841AFD38CC00A48FD3 /* CoreLocation.framework */,
+				F6E700821AFD38C600A48FD3 /* MapKit.framework */,
 				F6E700581AFD373C00A48FD3 /* WordSearch */,
 				F6E700751AFD373C00A48FD3 /* WordSearchTests */,
 				F6E700571AFD373C00A48FD3 /* Products */,
@@ -84,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
+				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
-				F6E700631AFD373C00A48FD3 /* ViewController.h */,
-				F6E700641AFD373C00A48FD3 /* ViewController.m */,
+				F6E700871AFD38E200A48FD3 /* Model */,
 				F6E700661AFD373C00A48FD3 /* Main.storyboard */,
 				F6E700691AFD373C00A48FD3 /* Images.xcassets */,
 				F6E7006B1AFD373C00A48FD3 /* LaunchScreen.xib */,
@@ -120,6 +165,25 @@
 				F6E700771AFD373C00A48FD3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6E700861AFD38D900A48FD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6E700631AFD373C00A48FD3 /* ViewController.h */,
+				F6E700641AFD373C00A48FD3 /* ViewController.m */,
+				F6E700891AFD3ACE00A48FD3 /* MapaViewController.m */,
+				F6E700881AFD3ACE00A48FD3 /* MapaViewController.h */,
+				F6E6879C1B013301006D3FAE /* SCLAlertView */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F6E700871AFD38E200A48FD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +235,7 @@
 				TargetAttributes = {
 					F6E700551AFD373C00A48FD3 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = TYR4SNBGM8;
 					};
 					F6E700711AFD373C00A48FD3 = {
 						CreatedOnToolsVersion = 6.3;
@@ -223,9 +288,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E7005F1AFD373C00A48FD3 /* AppDelegate.m in Sources */,
+				F6E687AB1B01334D006D3FAE /* SCLButton.m in Sources */,
+				F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */,
+				F6E7008A1AFD3ACE00A48FD3 /* MapaViewController.m in Sources */,
+				F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */,
 				F6E700621AFD373C00A48FD3 /* WordSearch.xcdatamodeld in Sources */,
+				F6E687AC1B01334D006D3FAE /* UIImage+ImageEffects.m in Sources */,
 				F6E700651AFD373C00A48FD3 /* ViewController.m in Sources */,
 				F6E7005C1AFD373C00A48FD3 /* main.m in Sources */,
+				F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,9 +424,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -363,9 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -422,6 +499,7 @@
 				F6E7007E1AFD373C00A48FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6E7007F1AFD373C00A48FD3 /* Build configuration list for PBXNativeTarget "WordSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +508,7 @@
 				F6E700811AFD373C00A48FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
