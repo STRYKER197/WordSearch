@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A31C681B01508900763793 /* CustomAnnotation.m */; };
 		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
 		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
 		F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
 		F6E6879E1B01334D006D3FAE /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
 		F6E6879F1B01334D006D3FAE /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
@@ -87,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6A31C661B01507200763793 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				F6A31C671B01508900763793 /* CustomAnnotation.h */,
+				F6A31C681B01508900763793 /* CustomAnnotation.m */,
+			);
+			name = Annotation;
+			sourceTree = "<group>";
+		};
 		F6E6879C1B013301006D3FAE /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +140,7 @@
 		F6E700581AFD373C00A48FD3 /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F6A31C661B01507200763793 /* Annotation */,
 				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
 				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
@@ -292,6 +305,7 @@
 				F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */,
 				F6E7008A1AFD3ACE00A48FD3 /* MapaViewController.m in Sources */,
 				F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */,
+				F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */,
 				F6E700621AFD373C00A48FD3 /* WordSearch.xcdatamodeld in Sources */,
 				F6E687AC1B01334D006D3FAE /* UIImage+ImageEffects.m in Sources */,
 				F6E700651AFD373C00A48FD3 /* ViewController.m in Sources */,
