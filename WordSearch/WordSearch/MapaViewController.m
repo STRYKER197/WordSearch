@@ -49,7 +49,7 @@ NSMutableArray *numerosSorteados;
     [self iniciarJogo];
  
     //Tipo do mapa
-    mapKit.mapType = MKMapTypeSatellite;
+    mapKit.mapType = MKMapTypeStandard;
     mapKit.delegate = self;
 }
 
