@@ -22,6 +22,7 @@ NSArray *paisesArray;
 NSString *paisSearch;
 CLGeocoder *ceo;
 CLLocation *loc;
+NSMutableArray *numerosSorteados;
 
 @implementation MapaViewController
 @synthesize lblPoint, lblTime, lblPais, mapKit;
@@ -48,7 +49,7 @@ CLLocation *loc;
     [self iniciarJogo];
  
     //Tipo do mapa
-    mapKit.mapType = MKMapTypeSatellite;
+    mapKit.mapType = MKMapTypeStandard;
     mapKit.delegate = self;
 }
 
@@ -95,6 +96,7 @@ CLLocation *loc;
 
 - (void)decrementTimer:(NSTimer *)timer
 {
+        NSLog(@"Teste de Numero: %d", [self gerarNumero]);
     counter = counter - 1;
     lblTime.text = [NSString stringWithFormat:@"%d",counter];
     //(GAME-OVER) - O TEMPO ACABOU
@@ -133,12 +135,37 @@ CLLocation *loc;
 {
     counter = 20;
     //Seleciona o proximo pais.
-    int numberRandom = arc4random_uniform(2);
+    int numberRandom = arc4random_uniform(3);
     paisSearch = paisesArray[numberRandom];
     lblPais.text = paisSearch;
     
 }
 
+- (int) gerarNumero
+{
+    int n = arc4random_uniform(4);
+    
+    int contador=0;
+    if (numerosSorteados.count == 4) {
+        [numerosSorteados removeAllObjects];
+    }
+    
+    if (numerosSorteados.count == 0) {
+        [numerosSorteados addObject:[NSDecimalNumber numberWithInt:n]];
+        return n;
+    } else {
+        while (contador > 0) {
+            contador = 0;
+            int n = arc4random_uniform(2);
+        for (int i=0; i<numerosSorteados.count; i++) {
+            if (numerosSorteados[i] == [NSDecimalNumber numberWithInt:n]) {
+                contador++;
+                }
+            }
+        }
+        return n;
+    }
+}
 
 //MARK: Pinos
 - (void) adicionarPino:(UIGestureRecognizer *)gesto {
@@ -147,9 +174,7 @@ CLLocation *loc;
         CLLocationCoordinate2D coordenadas = [mapKit convertPoint:ponto toCoordinateFromView:mapKit];
         MKPointAnnotation *pino = [[MKPointAnnotation alloc] init];
         pino.coordinate = coordenadas;
-//        pino.title = @"=D";
-        
-        
+
         ceo = [[CLGeocoder alloc]init];
         loc = [[CLLocation alloc]initWithLatitude:pino.coordinate.latitude longitude:pino.coordinate.longitude]; //insert your coordinatesz
         [ceo reverseGeocodeLocation:loc
@@ -187,40 +212,58 @@ CLLocation *loc;
 }
 
 //MARK: Métodos dos pinos(Annotations)
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+
+- (MKAnnotationView *)mapView:(MKMapView *)map viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    MKPinAnnotationView *pinView = (MKPinAnnotationView *) [self.mapKit dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
-    if (!pinView) {
-        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
-        
-        //Cor aleatoria de pinos
-        
-//        switch (r) {
-//            case 1:
-//                pinView.pinColor = MKPinAnnotationColorGreen;
-//                break;
-//            case 2:
-//                pinView.pinColor = MKPinAnnotationColorPurple;
-//                break;
-//            case 3:
-//                pinView.pinColor = MKPinAnnotationColorRed;
-//                break;
-//                
-//            default:
-//                pinView.pinColor = MKPinAnnotationColorRed;
-//                break;
-//        }
-        pinView.animatesDrop = YES;
-        pinView.canShowCallout = YES;
-        pinView.image = [UIImage imageNamed:@"acerto.png"];
-        UIButton *btPin = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        pinView.rightCalloutAccessoryView = btPin;
-    } else {
-        //Existe no cache , vamos reaproveitar
-        pinView.annotation = annotation;
+    static NSString *AnnotationViewID = @"annotationViewID";
+    
+    MKAnnotationView *annotationView = (MKAnnotationView *)[mapKit dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    
+    if (annotationView == nil)
+    {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annotationViewID"];
     }
-    return pinView;
+    
+    annotationView.image = [UIImage imageNamed:@"target.png"];
+    annotationView.annotation = annotation;
+    
+    return annotationView;
 }
+
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+//{
+//    MKPinAnnotationView *pinView = (MKPinAnnotationView *) [self.mapKit dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
+//    if (!pinView) {
+//        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
+//        
+//        //Cor aleatoria de pinos
+//        
+////        switch (r) {
+////            case 1:
+////                pinView.pinColor = MKPinAnnotationColorGreen;
+////                break;
+////            case 2:
+////                pinView.pinColor = MKPinAnnotationColorPurple;
+////                break;
+////            case 3:
+////                pinView.pinColor = MKPinAnnotationColorRed;
+////                break;
+////                
+////            default:
+////                pinView.pinColor = MKPinAnnotationColorRed;
+////                break;
+////        }
+//        pinView.animatesDrop = YES;
+//        pinView.canShowCallout = YES;
+//        pinView.image = [UIImage imageNamed:@"acerto.png"];
+//        UIButton *btPin = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        pinView.rightCalloutAccessoryView = btPin;
+//    } else {
+//        //Existe no cache , vamos reaproveitar
+//        pinView.annotation = annotation;
+//    }
+//    return pinView;
+//}
 
 //- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 //{
