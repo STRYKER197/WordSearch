@@ -48,6 +48,7 @@
 		0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */; };
 		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
+		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
 		F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A31C681B01508900763793 /* CustomAnnotation.m */; };
 		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
 		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
@@ -121,6 +122,8 @@
 		F6976EB41B0304090048B25C /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
 		F6976EB61B03046F0048B25C /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		F6976EB71B03046F0048B25C /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		F6976EB91B03B6720048B25C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		F6976EBA1B03B6720048B25C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 		F6E700871AFD38E200A48FD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6976EB91B03B6720048B25C /* Score.h */,
+				F6976EBA1B03B6720048B25C /* Score.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				F6E687AB1B01334D006D3FAE /* SCLButton.m in Sources */,
 				F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */,
 				F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */,
+				F6976EBB1B03B6720048B25C /* Score.m in Sources */,
 				F6E7008A1AFD3ACE00A48FD3 /* MapaViewController.m in Sources */,
 				F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */,
 				F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */,

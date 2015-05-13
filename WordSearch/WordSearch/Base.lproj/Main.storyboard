@@ -367,7 +367,7 @@
         <!--Pontuações-->
         <scene sceneID="asF-wc-odJ">
             <objects>
-                <viewController title="Pontuações" id="yAs-MA-qE2" customClass="ScoreViewController" sceneMemberID="viewController">
+                <viewController title="Pontuações" modalTransitionStyle="partialCurl" id="yAs-MA-qE2" customClass="ScoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MXd-P5-pkm"/>
                         <viewControllerLayoutGuide type="bottom" id="PWM-NH-iKm"/>
@@ -375,6 +375,24 @@
                     <view key="view" contentMode="scaleToFill" id="Ojf-QL-GTC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hey-O5-9LA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="OWW-Jv-Zsh">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OWW-Jv-Zsh" id="fbi-lN-Urv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yAs-MA-qE2" id="HLY-x9-T6K"/>
+                                    <outlet property="delegate" destination="yAs-MA-qE2" id="Kdk-W1-vvj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pontuações" id="Ti0-g1-5fc"/>
@@ -387,7 +405,7 @@
         <!--About-->
         <scene sceneID="Osq-5R-9gc">
             <objects>
-                <viewController title="About" id="74v-JP-cly" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController title="About" modalTransitionStyle="partialCurl" id="74v-JP-cly" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iGn-Q0-DoH"/>
                         <viewControllerLayoutGuide type="bottom" id="Jr1-RF-GKh"/>

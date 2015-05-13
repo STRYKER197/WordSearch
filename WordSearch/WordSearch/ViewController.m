@@ -20,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.delegate = self;
+    NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *targetPath = [libraryPath stringByAppendingPathComponent:@"WordSearch.sqlite"];
+    NSLog(@"%@", targetPath);
+    
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {

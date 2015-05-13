@@ -13,9 +13,11 @@
 @end
 
 @implementation ScoreViewController
-
+@synthesize scoreArray;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    scoreArray = @[@"Teste"];
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {
@@ -27,6 +29,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [scoreArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSLog(@"Entra aqui");
+    cell.textLabel.text = scoreArray[indexPath.row];
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation

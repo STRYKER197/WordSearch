@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UINavigationControllerDelegate>
 
 
 @end

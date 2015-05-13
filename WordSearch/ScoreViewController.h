@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScoreViewController : UIViewController
+@interface ScoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) NSMutableArray *scoreArray;
 
 @end

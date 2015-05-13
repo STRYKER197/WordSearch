@@ -107,7 +107,7 @@ NSTimer *myTimer;
 
 - (void)decrementTimer:(NSTimer *)timer
 {
-        NSLog(@"Teste de Numero: %d", [self gerarNumero]);
+//    NSLog(@"Teste de Numero: %d", [self gerarNumero]);
     counter = counter - 1;
     lblTime.text = [NSString stringWithFormat:@"%d",counter];
     
