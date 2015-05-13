@@ -11,6 +11,7 @@
 #import "SCLAlertView.h"
 #import "CustomAnnotation.h"
 
+#define qtd 5
 
 @interface MapaViewController ()
 
@@ -23,18 +24,20 @@ NSString *paisSearch;
 CLGeocoder *ceo;
 CLLocation *loc;
 NSMutableArray *numerosSorteados;
+NSTimer *myTimer;
 
 @implementation MapaViewController
 @synthesize lblPoint, lblTime, lblPais, mapKit;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%d",qtd);
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
-        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina"];
+        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina", @"Uruguai", @"Australia"];
     } else {
-        paisesArray = @[@"Brazil", @"United States", @"Argentina"];
+        paisesArray = @[@"Brazil", @"United States", @"Argentina", @"Uruguay", @"Australia"];
     }
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
@@ -44,7 +47,12 @@ NSMutableArray *numerosSorteados;
     //Inicia o GeoCoder
     ceo = [[CLGeocoder alloc]init];
     loc = [[CLLocation alloc]initWithLatitude:32.00 longitude:21.322]; //insert your coordinatesz
-    
+
+    [ceo reverseGeocodeLocation:loc
+              completionHandler:^(NSArray *placemarks, NSError *error) {
+                  NSLog(@"Iniciando GeoCoder");
+              
+              }];
     //Inicia o jogo
     [self iniciarJogo];
  
@@ -55,31 +63,34 @@ NSMutableArray *numerosSorteados;
 
 - (void) iniciarJogo
 {
-    int numberRandom = arc4random_uniform(2);
+    int numberRandom = arc4random_uniform(qtd);
     paisSearch = paisesArray[numberRandom];
-    NSString *texto = [NSString stringWithFormat:@"Procure por: %@", paisSearch];
+//    NSString *texto = [NSString stringWithFormat:@"Procure por: %@", paisSearch];
     lblPais.text = paisSearch;
     
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
     
-    SCLButton *button = [alert addButton:@"Iniciar Jogo" target:self selector:@selector(comecarJogo)];
+//    SCLButton *button = [alert addButton:@"Iniciar Jogo" target:self selector:@selector(comecarJogo)];
     
-    button.buttonFormatBlock = ^NSDictionary* (void)
-    {
-        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
-        
-//        buttonConfig[@"backgroundColor"] = [UIColor whiteColor];
-//        buttonConfig[@"textColor"] = [UIColor blackColor];
-//        buttonConfig[@"borderWidth"] = @2.0f;
-//        buttonConfig[@"borderColor"] = [UIColor greenColor];
-        
-        return buttonConfig;
-    };
+//    button.buttonFormatBlock = ^NSDictionary* (void)
+//    {
+//        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
+//        
+////        buttonConfig[@"backgroundColor"] = [UIColor whiteColor];
+////        buttonConfig[@"textColor"] = [UIColor blackColor];
+////        buttonConfig[@"borderWidth"] = @2.0f;
+////        buttonConfig[@"borderColor"] = [UIColor greenColor];
+//        
+//        return buttonConfig;
+//    };
     
     
     alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [[NSBundle mainBundle] resourcePath]]];
     
-    [alert showSuccess:@"World Search" subTitle:@"Ache o pais designado:" closeButtonTitle:@"Sair" duration:0.0f];
+    [alert showSuccess:@"World Search" subTitle:@"Divirta-se!!!" closeButtonTitle:@"Começar o jogo" duration:0.0f];
+    [alert alertIsDismissed:^{
+        [self comecarJogo];
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -91,7 +102,7 @@ NSMutableArray *numerosSorteados;
 {
     //Quantidade de segundos do jogo.
     counter = 20;
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(decrementTimer:)                                                              userInfo:nil repeats:YES];
+    myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(decrementTimer:)                                                              userInfo:nil repeats:YES];
 }
 
 - (void)decrementTimer:(NSTimer *)timer
@@ -99,6 +110,15 @@ NSMutableArray *numerosSorteados;
         NSLog(@"Teste de Numero: %d", [self gerarNumero]);
     counter = counter - 1;
     lblTime.text = [NSString stringWithFormat:@"%d",counter];
+    
+    if (counter <= 5) {
+        lblTime.textColor = [UIColor redColor];
+    } else {
+        lblTime.textColor = [UIColor colorWithRed:101.0f/255.0f
+                                            green:186.0f/255.0f
+                                             blue:105.0f/255.0f
+                                            alpha:1.0f];
+    }
     //(GAME-OVER) - O TEMPO ACABOU
     if (counter <= 0) {
         [timer invalidate];
@@ -106,7 +126,7 @@ NSMutableArray *numerosSorteados;
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         alert.shouldDismissOnTapOutside = YES;
         [alert alertIsDismissed:^{
-            NSLog(@"SCLAlertView dismissed!");
+            //Alerta de encerramento
         }];
         NSString *texto = [NSString stringWithFormat:@"Fim de jogo \n Sua pontuação é: %@", lblPoint.text];
         [alert showInfo:self title:@"Game Over" subTitle:texto closeButtonTitle:@"Ok" duration:0.0f];
@@ -135,7 +155,7 @@ NSMutableArray *numerosSorteados;
 {
     counter = 20;
     //Seleciona o proximo pais.
-    int numberRandom = arc4random_uniform(3);
+    int numberRandom = arc4random_uniform(qtd);
     paisSearch = paisesArray[numberRandom];
     lblPais.text = paisSearch;
     
@@ -156,7 +176,7 @@ NSMutableArray *numerosSorteados;
     } else {
         while (contador > 0) {
             contador = 0;
-            int n = arc4random_uniform(2);
+            int n = arc4random_uniform(qtd);
         for (int i=0; i<numerosSorteados.count; i++) {
             if (numerosSorteados[i] == [NSDecimalNumber numberWithInt:n]) {
                 contador++;
@@ -180,22 +200,7 @@ NSMutableArray *numerosSorteados;
         [ceo reverseGeocodeLocation:loc
                   completionHandler:^(NSArray *placemarks, NSError *error) {
                       CLPlacemark *placemark = [placemarks objectAtIndex:0];
-//                      NSLog(@"placemark %@",placemark);
-                      //String to hold address
-//                      NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
-//                      NSLog(@"addressDictionary %@", placemark.addressDictionary);
-//                      NSLog(@"placemark %@",placemark.region);
-//                      NSLog(@"placemark %@",placemark.country);  // Give Country Name
-//                      NSLog(@"placemark %@",placemark.locality); // Extract the city name
-//                      NSLog(@"location %@",placemark.name);
-//                      NSLog(@"location %@",placemark.ocean);
-//                      NSLog(@"location %@",placemark.postalCode);
-//                      NSLog(@"location %@",placemark.subLocality);
-//                      
-//                      NSLog(@"location %@",placemark.location);
-//                      //Print the location to console
-//                      NSLog(@"I am currently at %@",locatedAt);
-                      
+                      NSLog(@"Pais: %@",placemark.country);
                       if ([paisSearch isEqualToString:placemark.country]) {
                           [self adicionaPontuacao];
                           NSLog(@"Você Acertou!");
@@ -281,11 +286,38 @@ NSMutableArray *numerosSorteados;
 //    }
 //}
 
+
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     //Clicou no botão da view
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MapView" message:@"Oppa Gangnam Style" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
     [alert show];
 }
 
-
+- (void)backToMenu {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [myTimer invalidate];
+}
+- (IBAction)pauseGame:(id)sender {
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    
+    UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
+    
+    SCLButton *button = [alert addButton:@"Quit Game" target:self selector:@selector(backToMenu)];
+    
+//    
+//    [alert addButton:@"Second Button" actionBlock:^(void) {
+//        NSLog(@"Second button tapped");
+//    }];
+    
+    alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [[NSBundle mainBundle] resourcePath]]];
+    
+    
+    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Custom" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"Cancelar" duration:0.0f];
+    
+    
+    
+    [alert alertIsDismissed:^{
+        NSLog(@"Fechou a view customizada");
+    }];
+}
 @end

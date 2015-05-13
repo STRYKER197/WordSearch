@@ -46,6 +46,8 @@
 		0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */; };
 		0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */; };
 		0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */; };
+		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
+		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A31C681B01508900763793 /* CustomAnnotation.m */; };
 		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
 		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
@@ -115,6 +117,10 @@
 		0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Regular.otf"; path = "../AkzidenzGrotesk-Regular.otf"; sourceTree = "<group>"; };
 		0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Super.otf"; path = "../AkzidenzGrotesk-Super.otf"; sourceTree = "<group>"; };
 		0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-SuperItalic.otf"; path = "../AkzidenzGrotesk-SuperItalic.otf"; sourceTree = "<group>"; };
+		F6976EB31B0304090048B25C /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreViewController.h; path = ../ScoreViewController.h; sourceTree = "<group>"; };
+		F6976EB41B0304090048B25C /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
+		F6976EB61B03046F0048B25C /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		F6976EB71B03046F0048B25C /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
@@ -264,13 +270,14 @@
 		F6E700581AFD373C00A48FD3 /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F6E700661AFD373C00A48FD3 /* Main.storyboard */,
+				F6E6879C1B013301006D3FAE /* SCLAlertView */,
 				0A1CE3A41B0159D800D78CCD /* fonts */,
 				F6A31C661B01507200763793 /* Annotation */,
 				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
-				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
+				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E700871AFD38E200A48FD3 /* Model */,
-				F6E700661AFD373C00A48FD3 /* Main.storyboard */,
 				F6E700691AFD373C00A48FD3 /* Images.xcassets */,
 				F6E7006B1AFD373C00A48FD3 /* LaunchScreen.xib */,
 				F6E700601AFD373C00A48FD3 /* WordSearch.xcdatamodeld */,
@@ -310,9 +317,12 @@
 			children = (
 				F6E700631AFD373C00A48FD3 /* ViewController.h */,
 				F6E700641AFD373C00A48FD3 /* ViewController.m */,
-				F6E700891AFD3ACE00A48FD3 /* MapaViewController.m */,
 				F6E700881AFD3ACE00A48FD3 /* MapaViewController.h */,
-				F6E6879C1B013301006D3FAE /* SCLAlertView */,
+				F6E700891AFD3ACE00A48FD3 /* MapaViewController.m */,
+				F6976EB31B0304090048B25C /* ScoreViewController.h */,
+				F6976EB41B0304090048B25C /* ScoreViewController.m */,
+				F6976EB61B03046F0048B25C /* AboutViewController.h */,
+				F6976EB71B03046F0048B25C /* AboutViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -467,6 +477,7 @@
 				F6E7005F1AFD373C00A48FD3 /* AppDelegate.m in Sources */,
 				F6E687AB1B01334D006D3FAE /* SCLButton.m in Sources */,
 				F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */,
+				F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */,
 				F6E7008A1AFD3ACE00A48FD3 /* MapaViewController.m in Sources */,
 				F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */,
 				F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */,
@@ -474,6 +485,7 @@
 				F6E687AC1B01334D006D3FAE /* UIImage+ImageEffects.m in Sources */,
 				F6E700651AFD373C00A48FD3 /* ViewController.m in Sources */,
 				F6E7005C1AFD373C00A48FD3 /* main.m in Sources */,
+				F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */,
 				F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

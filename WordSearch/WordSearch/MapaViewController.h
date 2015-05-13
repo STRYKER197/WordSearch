@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblPoint;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblPais;
+- (IBAction)pauseGame:(id)sender;
 
 @end
