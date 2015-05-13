@@ -7,8 +7,7 @@
 //
 
 #import "ScoreViewController.h"
-#import "Score.h"
-#import "AppDelegate.h"
+
 @interface ScoreViewController ()
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
@@ -16,15 +15,16 @@
 
 @end
 
-NSMutableArray *scoreArray;
+NSArray *scoreArray;
+NSArray *score2Array;
 @implementation ScoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = appDelegate.managedObjectContext;
     
+    score2Array = @[@"13/05/2015", @"13/05/2015", @"13/05/2015", @"13/05/2015"];
+    scoreArray = @[@"40 PTS", @"80 PTS", @"20 PTS", @"0 PTS"];
 
     
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
@@ -33,7 +33,7 @@ NSMutableArray *scoreArray;
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
     }
     
-    scoreArray = [self select];
+//    scoreArray = [self select];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,42 +43,17 @@ NSMutableArray *scoreArray;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [scoreArray count];
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    NSLog(@"Entra aqui");
+    cell.detailTextLabel.text = score2Array[indexPath.row];
     cell.textLabel.text = scoreArray[indexPath.row];
     return cell;
 }
 
-- (NSMutableArray *) select
-{
-    NSFetchedResultsController *fetchedResultsControllerLocal;
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Score" inManagedObjectContext:self.managedObjectContext];
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    [fetchRequest setEntity:entity];
-   
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"data" ascending:YES];
-    NSArray *sortDescriptors = @[sortDescriptor];
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    fetchedResultsControllerLocal = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-    NSError *error = nil;
-    if (![fetchedResultsControllerLocal performFetch:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    NSArray *arObj = fetchedResultsControllerLocal.fetchedObjects;
-    
-    NSMutableArray *dados = [[NSMutableArray alloc] initWithArray:arObj];
-
-    return dados;
-}
 /*
 #pragma mark - Navigation
 
