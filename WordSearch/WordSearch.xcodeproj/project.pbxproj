@@ -61,7 +61,6 @@
 		F6E700651AFD373C00A48FD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E700641AFD373C00A48FD3 /* ViewController.m */; };
 		F6E700681AFD373C00A48FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E700661AFD373C00A48FD3 /* Main.storyboard */; };
 		F6E7006A1AFD373C00A48FD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E700691AFD373C00A48FD3 /* Images.xcassets */; };
-		F6E7006D1AFD373C00A48FD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E7006B1AFD373C00A48FD3 /* LaunchScreen.xib */; };
 		F6E700791AFD373C00A48FD3 /* WordSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E700781AFD373C00A48FD3 /* WordSearchTests.m */; };
 		F6E700831AFD38C600A48FD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E700821AFD38C600A48FD3 /* MapKit.framework */; };
 		F6E700851AFD38CC00A48FD3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E700841AFD38CC00A48FD3 /* CoreLocation.framework */; };
@@ -147,7 +146,6 @@
 		F6E700641AFD373C00A48FD3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F6E700671AFD373C00A48FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6E700691AFD373C00A48FD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F6E7006C1AFD373C00A48FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F6E700721AFD373C00A48FD3 /* WordSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E700771AFD373C00A48FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E700781AFD373C00A48FD3 /* WordSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordSearchTests.m; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E700871AFD38E200A48FD3 /* Model */,
 				F6E700691AFD373C00A48FD3 /* Images.xcassets */,
-				F6E7006B1AFD373C00A48FD3 /* LaunchScreen.xib */,
 				F6E700601AFD373C00A48FD3 /* WordSearch.xcdatamodeld */,
 				F6E700591AFD373C00A48FD3 /* Supporting Files */,
 			);
@@ -455,7 +452,6 @@
 				0A1CE39B1B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf in Resources */,
 				0A1CE37F1B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf in Resources */,
 				0A1CE37E1B01599600D78CCD /* AkzidenzGrotesk-BoldCond.otf in Resources */,
-				F6E7006D1AFD373C00A48FD3 /* LaunchScreen.xib in Resources */,
 				F6E7006A1AFD373C00A48FD3 /* Images.xcassets in Resources */,
 				0A1CE3951B01599600D78CCD /* AkzidenzGrotesk-LightItalic.otf in Resources */,
 				0A1CE3851B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf in Resources */,
@@ -521,14 +517,6 @@
 				F6E700671AFD373C00A48FD3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F6E7006B1AFD373C00A48FD3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6E7006C1AFD373C00A48FD3 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
