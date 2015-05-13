@@ -10,12 +10,15 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SCLAlertView.h"
 #import "CustomAnnotation.h"
+#import "AppDelegate.h"
+#import "Score.h"
+@import CoreData;
 
 #define qtd 5
 
 @interface MapaViewController ()
 
-
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @end
 
 int counter = 0;
@@ -31,11 +34,16 @@ NSTimer *myTimer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self save];
+    //CoreData
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = appDelegate.managedObjectContext;
+    
     NSLog(@"%d",qtd);
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
-        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina", @"Uruguai", @"Australia"];
+        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina", @"Uruguai", @"Austrália"];
     } else {
         paisesArray = @[@"Brazil", @"United States", @"Argentina", @"Uruguay", @"Australia"];
     }
@@ -187,6 +195,18 @@ NSTimer *myTimer;
     }
 }
 
+
+- (void) save
+{
+    Score *sc = [NSEntityDescription insertNewObjectForEntityForName:@"Score" inManagedObjectContext:self.managedObjectContext];
+
+    sc.pontuacao = @"TESTE";
+    sc.data = @"TESTE DATA";
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Erro");
+    }
+}
 //MARK: Pinos
 - (void) adicionarPino:(UIGestureRecognizer *)gesto {
     if (gesto.state == UIGestureRecognizerStateBegan) {

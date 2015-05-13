@@ -7,13 +7,14 @@
 //
 
 #import "ScoreViewController.h"
-
+#import "Score.h"
 @interface ScoreViewController ()
 
 @end
 
+NSArray *scoreArray;
 @implementation ScoreViewController
-@synthesize scoreArray;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -43,7 +44,23 @@
     return cell;
 }
 
-
+- (void) save
+{
+//    Score *uf = [NSEntityDescription
+//                                insertNewObjectForEntityForName:@"Score"
+//                                inManagedObjectContext:self.managedObjectContext];
+    
+//    uf.id = [[[NSUUID alloc] init] UUIDString];
+//    uf.code = code;
+//    uf.name = name;
+//    uf.image = image;
+//    
+//    NSError *error;
+//    
+//    if (![self.managedObjectContext save:&error]) {
+//        NSLog(@"Could not save %@, %@", error, error.userInfo);
+//    }
+}
 /*
 #pragma mark - Navigation
 
