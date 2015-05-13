@@ -434,22 +434,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h0-Y8-wQk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <color key="backgroundColor" red="0.094117647058823528" green="0.65490196078431373" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.094117647060000004" green="0.65490196079999996" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="-41" height="4"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-eJ-8UE">
-                                <rect key="frame" x="16" y="89" width="343" height="243"/>
+                                <rect key="frame" x="16" y="72" width="343" height="251"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Esse jogo foi desenvolvido com muito amor e carinho, por dois alunos  que tinham vontade de conhecer o mundo mas so possuiam o mapkit.  Conheça o mundo com a gente!!  Copyright 2015, TwoGuys, todos os direitos reservaods.
+                                <string key="text">Esse jogo foi desenvolvido com muito amor e carinho, por dois alunos  que tinham vontade de conhecer o mundo mas so possuiam o mapkit.  Conheça o mundo com a gente!!  Copyright 2015, TwoGuys, todos os direitos reservaods.
 
-Desenvolvedor: Rodrigo Silva Designer: Michel Paz</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+Desenvolvedor: Rodrigo Silva Designer: Michel Paz</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
