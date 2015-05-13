@@ -8,22 +8,32 @@
 
 #import "ScoreViewController.h"
 #import "Score.h"
+#import "AppDelegate.h"
 @interface ScoreViewController ()
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 
 @end
 
-NSArray *scoreArray;
+NSMutableArray *scoreArray;
 @implementation ScoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = appDelegate.managedObjectContext;
     
-    scoreArray = @[@"Teste"];
+
+    
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
     }
+    
+    scoreArray = [self select];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,22 +54,30 @@ NSArray *scoreArray;
     return cell;
 }
 
-- (void) save
+- (NSMutableArray *) select
 {
-//    Score *uf = [NSEntityDescription
-//                                insertNewObjectForEntityForName:@"Score"
-//                                inManagedObjectContext:self.managedObjectContext];
+    NSFetchedResultsController *fetchedResultsControllerLocal;
     
-//    uf.id = [[[NSUUID alloc] init] UUIDString];
-//    uf.code = code;
-//    uf.name = name;
-//    uf.image = image;
-//    
-//    NSError *error;
-//    
-//    if (![self.managedObjectContext save:&error]) {
-//        NSLog(@"Could not save %@, %@", error, error.userInfo);
-//    }
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Score" inManagedObjectContext:self.managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+   
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"data" ascending:YES];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    fetchedResultsControllerLocal = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    NSError *error = nil;
+    if (![fetchedResultsControllerLocal performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    NSArray *arObj = fetchedResultsControllerLocal.fetchedObjects;
+    
+    NSMutableArray *dados = [[NSMutableArray alloc] initWithArray:arObj];
+
+    return dados;
 }
 /*
 #pragma mark - Navigation

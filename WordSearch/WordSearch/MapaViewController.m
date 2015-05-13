@@ -14,7 +14,7 @@
 #import "Score.h"
 @import CoreData;
 
-#define qtd 5
+#define qtd 15
 
 @interface MapaViewController ()
 
@@ -34,19 +34,18 @@ NSTimer *myTimer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self save];
     //CoreData
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
-    
-    NSLog(@"%d",qtd);
+
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
-        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina", @"Uruguai", @"Austrália"];
+        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina", @"Uruguai", @"Austrália", @"Islândia", @"França", @"Espanha", @"Irlanda", @"Rússia", @"Argélia", @"África Do Sul", @"Madagascar", @"Índia", @"Japão", @"China", @"Finlândia", @"Noruega", @"Groenlândia", @"Canadá"];
     } else {
-        paisesArray = @[@"Brazil", @"United States", @"Argentina", @"Uruguay", @"Australia"];
+        paisesArray = @[@"Brazil", @"United States", @"Argentina", @"Uruguay", @"Australia" ,@"Iceland", @"France", @"Spain", @"Ireland", @"Russia", @"Algeria", @"South Africa", @"Madagascar", @"India", @"Japan", @"China", @"Finland", @"Norway", @"Greenland", @"Canada"];
     }
+    
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
     toqueLongo.minimumPressDuration = 0.2;
@@ -67,6 +66,7 @@ NSTimer *myTimer;
     //Tipo do mapa
     mapKit.mapType = MKMapTypeStandard;
     mapKit.delegate = self;
+
 }
 
 - (void) iniciarJogo
@@ -136,6 +136,13 @@ NSTimer *myTimer;
         [alert alertIsDismissed:^{
             //Alerta de encerramento
         }];
+        
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"MMMM dd, yyyy (EEEE) HH:mm:ss z Z"];
+        NSDate *now = [NSDate date];
+        NSString *nsstr = [format stringFromDate:now];
+        
+        [self save:lblPoint.text data:nsstr];
         NSString *texto = [NSString stringWithFormat:@"Fim de jogo \n Sua pontuação é: %@", lblPoint.text];
         [alert showInfo:self title:@"Game Over" subTitle:texto closeButtonTitle:@"Ok" duration:0.0f];
     }
@@ -196,12 +203,12 @@ NSTimer *myTimer;
 }
 
 
-- (void) save
+- (void) save: (NSString *)pontuacao data:(NSString *)data
 {
     Score *sc = [NSEntityDescription insertNewObjectForEntityForName:@"Score" inManagedObjectContext:self.managedObjectContext];
 
-    sc.pontuacao = @"TESTE";
-    sc.data = @"TESTE DATA";
+    sc.pontuacao = pontuacao;
+    sc.data = data;
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Erro");
