@@ -239,8 +239,19 @@ NSTimer *myTimer;
                   }
          ];
         [mapKit addAnnotation:pino];
+        [NSTimer scheduledTimerWithTimeInterval:1
+                                         target:self
+                                       selector:@selector(removerPino)
+                                       userInfo:nil
+                                        repeats:NO];
+
     
     }
+}
+                     
+- (void) removerPino
+{
+    [mapKit removeAnnotation:[mapKit.annotations lastObject]];
 }
 
 //MARK: Métodos dos pinos(Annotations)
