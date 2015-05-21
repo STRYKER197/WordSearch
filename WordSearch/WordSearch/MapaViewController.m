@@ -29,6 +29,11 @@ CLLocation *loc;
 NSMutableArray *numerosSorteados;
 NSTimer *myTimer;
 
+NSTimer *timer;
+double timerInterval = 20.0;
+double timerElapsed = 0.0;
+NSDate *timerStarted;
+
 @implementation MapaViewController
 @synthesize lblPoint, lblTime, lblPais, mapKit;
 
@@ -36,6 +41,7 @@ NSTimer *myTimer;
     [super viewDidLoad];
     //CoreData
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
     self.managedObjectContext = appDelegate.managedObjectContext;
 
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
@@ -66,6 +72,8 @@ NSTimer *myTimer;
     //Tipo do mapa
     mapKit.mapType = MKMapTypeStandard;
     mapKit.delegate = self;
+    //Idioma do mapa
+    
 
 }
 
@@ -106,10 +114,10 @@ NSTimer *myTimer;
 }
 
 
-- (void) startCountdown
+- (void) startCountdown:(int)tempoInicial
 {
     //Quantidade de segundos do jogo.
-    counter = 20;
+    counter = tempoInicial;
     myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(decrementTimer:)                                                              userInfo:nil repeats:YES];
 }
 
@@ -156,7 +164,7 @@ NSTimer *myTimer;
 
 - (void) comecarJogo
 {
-    [self startCountdown];
+    [self startCountdown:20];
 }
 
 
@@ -336,13 +344,14 @@ NSTimer *myTimer;
     [myTimer invalidate];
 }
 - (IBAction)pauseGame:(id)sender {
+    
+    NSLog(@"Abriu a view customizada!");
+    [self pauseTimer];
+    
     SCLAlertView *alert = [[SCLAlertView alloc] init];
-    
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
-    
     SCLButton *button = [alert addButton:@"Quit Game" target:self selector:@selector(backToMenu)];
     
-//    
 //    [alert addButton:@"Second Button" actionBlock:^(void) {
 //        NSLog(@"Second button tapped");
 //    }];
@@ -355,7 +364,28 @@ NSTimer *myTimer;
     
     
     [alert alertIsDismissed:^{
-        NSLog(@"Fechou a view customizada");
+        [self startTimer];
+//        NSLog(@"Fechou a view customizada");
     }];
 }
+
+//MARK: Funções para pausar o jogo
+-(void) startTimer {
+    [self startCountdown:timerElapsed];
+}
+
+-(void) fired {
+    [myTimer invalidate];
+    myTimer = nil;
+//    timerElapsed = 0.0;
+    [self startTimer];
+    // react to timer event here
+}
+
+-(void) pauseTimer {
+    [myTimer invalidate];
+    myTimer = nil;
+    timerElapsed = [lblTime.text doubleValue];
+}
+
 @end
