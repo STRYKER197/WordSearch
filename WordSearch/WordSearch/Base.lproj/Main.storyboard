@@ -452,10 +452,10 @@ Desenvolvedor: Rodrigo Silva Designer: Michel Paz</string>
             </objects>
             <point key="canvasLocation" x="1532.5" y="1147.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Game Navigation View Controller-->
         <scene sceneID="hig-zA-11h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H3N-Z9-7dB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H3N-Z9-7dB" customClass="GameNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ia-Uc-bSh">
