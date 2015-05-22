@@ -10,13 +10,18 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SCLAlertView.h"
 #import "CustomAnnotation.h"
+#import <AudioToolbox/AudioServices.h>
+#import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
 #import "Score.h"
 @import CoreData;
 
-#define qtd 15
 
-@interface MapaViewController ()
+#define qtd 147
+
+@interface MapaViewController (){
+    AVAudioPlayer *_audioPlayer;
+}
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @end
@@ -37,8 +42,17 @@ NSDate *timerStarted;
 @implementation MapaViewController
 @synthesize lblPoint, lblTime, lblPais, mapKit;
 
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    //Reproduz o jogo
+
     //CoreData
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
@@ -47,14 +61,15 @@ NSDate *timerStarted;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
-        paisesArray = @[@"Brasil", @"Estados Unidos da América", @"Argentina", @"Uruguai", @"Austrália", @"Islândia", @"França", @"Espanha", @"Irlanda", @"Rússia", @"Argélia", @"África Do Sul", @"Madagascar", @"Índia", @"Japão", @"China", @"Finlândia", @"Noruega", @"Groenlândia", @"Canadá"];
+        paisesArray = @[@"Alaska", @"Canadá", @"Estados Unidos da América", @"México", @"Guatemala", @"Honduras", @"Nicarágua", @"Costa Rica", @"Panamá", @"Cuba", @"Jamaica", @"Bahamas", @"República Dominicana", @"Porto Rico", @"Haiti", @"Belize", @"Havaí", @"Brasil", @"Guiana Francesa", @"Guiana", @"Venezuela", @"Colômbia", @"Equador", @"Peru", @"Bolívia", @"Chile", @"Paraguai", @"Argentina", @"Uruguai", @"Suriname", @"Groenlândia", @"Islândia", @"Noruega", @"Suécia", @"Finlândia", @"Dinamarca", @"Estônia", @"Letônia", @"Lituânia", @"Bielorrússia", @"Ucrânia", @"Moldávia", @"Romênia", @"Bulgária", @"Albânia", @"Grécia", @"Sérvia", @"Bósnia-Herzegovina", @"Croácia", @"Hungria", @"República da Eslovênia", @"Áustria", @"Eslováquia", @"República Checa", @"Polônia", @"Alemanha", @"Suíça", @"Itália", @"Países Baixos", @"Bélgica", @"	França", @"Espanha", @"Portugal", @"Reino Unido", @"Irlanda", @"África do Sul", @"Madagascar", @"Moçambique", @"Zimbábue", @"Botsuana", @"Namíbia", @"Maláui", @"Zâmbia", @"Angola", @"Tanzânia", @"Congo", @"Gabão", @"Quênia", @"Uganda", @"Somália", @"Etiópia", @"Sudão Do Sul", @"República Centro-Africana", @"Camarões", @"Nigéria", @"Burkina Faso", @"Togo", @"Benin", @"Gana", @"Costa Do Marfim", @"Libéria", @"Serra Leoa", @"Guiné", @"Senegal", @"Mauritânia", @"Saara Ocidental", @"Marrocos", @"Mali", @"Argélia", @"Tunísia", @"Níger", @"Líbia", @"Chade", @"Egito", @"Sudão", @"Austrália", @"Nova Zelândia", @"Papua Nova-Guiné", @"Tasmânia", @"Rússia", @"Jordânia", @"Arábia Saudita", @"Iêmen", @"E.A.U", @"Omã", @"Iraque", @"Irã", @"Turquia", @"Azerbaijão", @"Geórgia", @"Síria", @"Irã", @"Afeganistão", @"Paquistão", @"Tadjiquistão", @"Uzbequistão", @"Turcomenistão", @"Quirguistão", @"Cazaquistão", @"Índia", @"Nepal", @"Butão", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Tailândia", @"Vietnã", @"Malásia", @"Indonésia", @"Filipinas", @"Taiwan", @"Mongólia", @"Coréia Do Norte", @"Coréia Do Sul", @"Japão"];
     } else {
-        paisesArray = @[@"Brazil", @"United States", @"Argentina", @"Uruguay", @"Australia" ,@"Iceland", @"France", @"Spain", @"Ireland", @"Russia", @"Algeria", @"South Africa", @"Madagascar", @"India", @"Japan", @"China", @"Finland", @"Norway", @"Greenland", @"Canada"];
+        paisesArray = @[@"Alaska", @"Canada", @"United States", @"Mexico", @"Guatemala", @"Honduras", @"Nicaragua", @"Costa Rica", @"Panama", @"Cuba", @"Jamaica", @"Bahamas", @"Dominican Republic", @"Puerto Rico", @"Haiti", @"Belize", @"Hawaii", @"Brazil", @"French Guiana", @"Guyana", @"Venezuela", @"Colombia", @"Ecuador", @"Peru", @"Bolivia", @"Chile", @"Paraguay", @"Argentina", @"Uruguay", @"Suriname", @"Greenland", @"Iceland", @"Norway", @"Sweden", @"Finland", @"Denmark", @"Estonia", @"Latvia", @"Lithuania", @"Belarus", @"Ukraine", @"Moldova", @"Romania", @"Bulgaria", @"Albania", @"Greece", @"Serbia", @"Bosnia and Herzegovina", @"Croatia", @"Hungary", @"Slovenia", @"Austria", @"Slovakia", @"Czech Republic", @"Poland", @"Germany", @"Switzerland", @"Italy", @"The Netherlands", @"Belgium", @"France", @"Spain", @"Portugal", @"United Kingdom", @"Ireland", @"South Africa", @"Madagascar", @"Mozambique", @"Zimbabwe", @"Botswana", @"Namibia", @"Malawi", @"Zambia", @"Angola", @"Tanzania", @"Congo", @"Gabon", @"Kenya", @"Uganda", @"Somalia", @"Ethiopia", @"South Sudan", @"Central African Republic", @"Cameroon", @"Nigeria", @"Burkina Faso", @"Togo", @"Benin", @"Ghana", @"Ivory Coast", @"Liberia", @"Sierra Leone", @"Guinea", @"Senegal", @"Mauritania", @"Western Sahara", @"Morocco", @"Mali", @"Algeria", @"Tunisia", @"Niger", @"Libya", @"Chad", @"Egypt", @"Sudan", @"Australia", @"New Zealand", @"Papua New Guine", @"Tasmania", @"Russia", @"Jordan", @"Saudi Arabia", @"Yemen", @"United Arab Emirates", @"Oman", @"Iraq", @"Iran", @"Turkey", @"Azerbaijan", @"Georgia", @"Syria", @"Iran", @"Afghanistan", @"Pakistan", @"Tajikistan", @"Uzbekistan", @"Turkmenistan", @"Kyrgyzstan", @"Kazakhstan", @"India", @"Nepal", @"Bhutan", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Thailand", @"Vietnam", @"Malaysia", @"Indonesia", @"Philippines", @"Taiwan", @"Mongolia", @"North Korea", @"South Korea", @"Japan"];
     }
     
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
-    toqueLongo.minimumPressDuration = 0.2;
+    //Tempo a ser pressionado
+    toqueLongo.minimumPressDuration = 0.1;
     [mapKit addGestureRecognizer:toqueLongo];
     
     //Inicia o GeoCoder
@@ -85,21 +100,6 @@ NSDate *timerStarted;
     lblPais.text = paisSearch;
     
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
-    
-//    SCLButton *button = [alert addButton:@"Iniciar Jogo" target:self selector:@selector(comecarJogo)];
-    
-//    button.buttonFormatBlock = ^NSDictionary* (void)
-//    {
-//        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
-//        
-////        buttonConfig[@"backgroundColor"] = [UIColor whiteColor];
-////        buttonConfig[@"textColor"] = [UIColor blackColor];
-////        buttonConfig[@"borderWidth"] = @2.0f;
-////        buttonConfig[@"borderColor"] = [UIColor greenColor];
-//        
-//        return buttonConfig;
-//    };
-    
     
     alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [[NSBundle mainBundle] resourcePath]]];
     
@@ -135,14 +135,22 @@ NSDate *timerStarted;
                                              blue:105.0f/255.0f
                                             alpha:1.0f];
     }
+    
+    //5 Segundos finais
+    if (counter>0 && counter <=5) {
+        [self som:@"5seconds.mp3"];
+    }
+    
     //(GAME-OVER) - O TEMPO ACABOU
     if (counter <= 0) {
+        [self som:@"chablau.mp3"];
         [timer invalidate];
         mapKit.userInteractionEnabled = false;
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         alert.shouldDismissOnTapOutside = YES;
         [alert alertIsDismissed:^{
             //Alerta de encerramento
+            [self backToMenu];
         }];
         
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -151,7 +159,7 @@ NSDate *timerStarted;
         NSString *nsstr = [format stringFromDate:now];
         
         [self save:lblPoint.text data:nsstr];
-        NSString *texto = [NSString stringWithFormat:@"Fim de jogo \n Sua pontuação é: %@", lblPoint.text];
+        NSString *texto = [NSString stringWithFormat:@" \n Sua pontuação: %@", lblPoint.text];
         [alert showInfo:self title:@"Game Over" subTitle:texto closeButtonTitle:@"Ok" duration:0.0f];
     }
 }
@@ -238,10 +246,13 @@ NSDate *timerStarted;
                       NSLog(@"Pais: %@",placemark.country);
                       if ([paisSearch isEqualToString:placemark.country]) {
                           [self adicionaPontuacao];
+                          [self som:@"acerto.mp3"];
                           NSLog(@"Você Acertou!");
                           [self proximoPais];
                       } else {
-                          NSLog(@"Você errou - 5 segundos!, %@", placemark.country);
+                          [self som:@"error.mp3"];
+                          AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                          NSLog(@"Você errou - 5 segundos!, MapKitL%@ -> Search:%@", placemark.country, paisSearch);
                           counter = counter - 5;
                       }
                   }
@@ -281,57 +292,6 @@ NSDate *timerStarted;
     return annotationView;
 }
 
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-//{
-//    MKPinAnnotationView *pinView = (MKPinAnnotationView *) [self.mapKit dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
-//    if (!pinView) {
-//        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
-//        
-//        //Cor aleatoria de pinos
-//        
-////        switch (r) {
-////            case 1:
-////                pinView.pinColor = MKPinAnnotationColorGreen;
-////                break;
-////            case 2:
-////                pinView.pinColor = MKPinAnnotationColorPurple;
-////                break;
-////            case 3:
-////                pinView.pinColor = MKPinAnnotationColorRed;
-////                break;
-////                
-////            default:
-////                pinView.pinColor = MKPinAnnotationColorRed;
-////                break;
-////        }
-//        pinView.animatesDrop = YES;
-//        pinView.canShowCallout = YES;
-//        pinView.image = [UIImage imageNamed:@"acerto.png"];
-//        UIButton *btPin = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//        pinView.rightCalloutAccessoryView = btPin;
-//    } else {
-//        //Existe no cache , vamos reaproveitar
-//        pinView.annotation = annotation;
-//    }
-//    return pinView;
-//}
-
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-//{
-//    if ([annotation isKindOfClass:[CustomAnnotation class]]) {
-//        CustomAnnotation *myLocation = (CustomAnnotation *)annotation;
-//        MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MyCustomAnnotation"];
-//        if (annotationView == nil) {
-//            annotationView = myLocation.annotationView;
-//        } else {
-//            annotationView.annotation = annotation;
-//        }
-//        return annotationView;
-//    } else {
-//        return nil;
-//    }
-//}
-
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     //Clicou no botão da view
@@ -356,10 +316,10 @@ NSDate *timerStarted;
 //        NSLog(@"Second button tapped");
 //    }];
     
-    alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [[NSBundle mainBundle] resourcePath]]];
+//    alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/yeah.mp3", [[NSBundle mainBundle] resourcePath]]];
     
     
-    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Custom" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"Cancelar" duration:0.0f];
+    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Pause" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"Cancelar" duration:0.0f];
     
     
     
@@ -369,6 +329,13 @@ NSDate *timerStarted;
     }];
 }
 
+//MARK: Funções de Som
+- (void) som:(NSString *)audio{
+    NSString *path = [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] resourcePath], audio];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:nil];
+    [_audioPlayer play];
+}
 //MARK: Funções para pausar o jogo
 -(void) startTimer {
     [self startCountdown:timerElapsed];

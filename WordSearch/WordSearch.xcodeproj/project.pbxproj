@@ -46,6 +46,14 @@
 		0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */; };
 		0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */; };
 		0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */; };
+		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
+		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
+		F6953FAC1B0E866D0064D317 /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FAB1B0E866D0064D317 /* yeah.mp3 */; };
+		F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FAD1B0E8C030064D317 /* AVFoundation.framework */; };
+		F6953FB01B0ED7090064D317 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FAF1B0ED7090064D317 /* error.mp3 */; };
+		F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB11B0ED7960064D317 /* acerto.mp3 */; };
+		F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB31B0ED86A0064D317 /* Chablau.mp3 */; };
+		F6953FB61B0ED8F00064D317 /* 5seconds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */; };
 		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
@@ -117,6 +125,15 @@
 		0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Regular.otf"; path = "../AkzidenzGrotesk-Regular.otf"; sourceTree = "<group>"; };
 		0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Super.otf"; path = "../AkzidenzGrotesk-Super.otf"; sourceTree = "<group>"; };
 		0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-SuperItalic.otf"; path = "../AkzidenzGrotesk-SuperItalic.otf"; sourceTree = "<group>"; };
+		F6953FA41B0E53C40064D317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = WordSearch/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F6953FAB1B0E866D0064D317 /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
+		F6953FAD1B0E8C030064D317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F6953FAF1B0ED7090064D317 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
+		F6953FB11B0ED7960064D317 /* acerto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acerto.mp3; sourceTree = "<group>"; };
+		F6953FB31B0ED86A0064D317 /* Chablau.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chablau.mp3; sourceTree = "<group>"; };
+		F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5seconds.mp3; sourceTree = "<group>"; };
 		F6976EB31B0304090048B25C /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreViewController.h; path = ../ScoreViewController.h; sourceTree = "<group>"; };
 		F6976EB41B0304090048B25C /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
 		F6976EB61B03046F0048B25C /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -160,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */,
 				F6E700851AFD38CC00A48FD3 /* CoreLocation.framework in Frameworks */,
 				F6E700831AFD38C600A48FD3 /* MapKit.framework in Frameworks */,
 			);
@@ -221,6 +239,35 @@
 			name = fonts;
 			sourceTree = "<group>";
 		};
+		F6953FA21B0E538E0064D317 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6953FA31B0E53C40064D317 /* LaunchScreen.xib */,
+			);
+			name = SplashScreen;
+			sourceTree = "<group>";
+		};
+		F6953FA61B0E59BF0064D317 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F6953FA71B0E59DC0064D317 /* Reachability.h */,
+				F6953FA81B0E59DC0064D317 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		F6953FAA1B0E86610064D317 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F6953FAB1B0E866D0064D317 /* yeah.mp3 */,
+				F6953FAF1B0ED7090064D317 /* error.mp3 */,
+				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
+				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
+				F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		F6A31C661B01507200763793 /* Annotation */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +298,7 @@
 		F6E7004D1AFD373C00A48FD3 = {
 			isa = PBXGroup;
 			children = (
+				F6953FAD1B0E8C030064D317 /* AVFoundation.framework */,
 				F6E700841AFD38CC00A48FD3 /* CoreLocation.framework */,
 				F6E700821AFD38C600A48FD3 /* MapKit.framework */,
 				F6E700581AFD373C00A48FD3 /* WordSearch */,
@@ -271,12 +319,15 @@
 		F6E700581AFD373C00A48FD3 /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F6953FAA1B0E86610064D317 /* Sounds */,
 				F6E700661AFD373C00A48FD3 /* Main.storyboard */,
+				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
+				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
+				F6953FA61B0E59BF0064D317 /* Reachability */,
+				F6953FA21B0E538E0064D317 /* SplashScreen */,
 				F6E6879C1B013301006D3FAE /* SCLAlertView */,
 				0A1CE3A41B0159D800D78CCD /* fonts */,
 				F6A31C661B01507200763793 /* Annotation */,
-				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
-				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
 				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E700871AFD38E200A48FD3 /* Model */,
 				F6E700691AFD373C00A48FD3 /* Images.xcassets */,
@@ -427,6 +478,7 @@
 				0A1CE3861B01599600D78CCD /* AkzidenzGrotesk-Extended.otf in Resources */,
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
 				0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */,
+				F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */,
 				0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */,
 				0A1CE3891B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldAlt.otf in Resources */,
 				0A1CE37D1B01599600D78CCD /* AkzidenzGrotesk-Bold.otf in Resources */,
@@ -437,13 +489,18 @@
 				0A1CE38A1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf in Resources */,
 				0A1CE38D1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf in Resources */,
 				0A1CE3911B01599600D78CCD /* AkzidenzGrotesk-LightCond.otf in Resources */,
+				F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */,
+				F6953FB01B0ED7090064D317 /* error.mp3 in Resources */,
 				0A1CE3811B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf in Resources */,
 				0A1CE3881B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf in Resources */,
 				0A1CE3821B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf in Resources */,
 				0A1CE3971B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf in Resources */,
 				F6E700681AFD373C00A48FD3 /* Main.storyboard in Resources */,
+				F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */,
 				0A1CE39E1B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf in Resources */,
 				0A1CE3941B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf in Resources */,
+				F6953FAC1B0E866D0064D317 /* yeah.mp3 in Resources */,
+				F6953FB61B0ED8F00064D317 /* 5seconds.mp3 in Resources */,
 				0A1CE3921B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf in Resources */,
 				0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */,
 				0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */,
@@ -479,6 +536,7 @@
 				F6E687AB1B01334D006D3FAE /* SCLButton.m in Sources */,
 				F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */,
 				F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */,
+				F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */,
 				F6976EBB1B03B6720048B25C /* Score.m in Sources */,
 				F6E7008A1AFD3ACE00A48FD3 /* MapaViewController.m in Sources */,
 				F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */,
@@ -511,6 +569,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F6953FA31B0E53C40064D317 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6953FA41B0E53C40064D317 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		F6E700661AFD373C00A48FD3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -614,6 +680,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -627,6 +694,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

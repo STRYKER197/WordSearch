@@ -1,63 +1,32 @@
 //
-//  ScoreViewController.m
+//  AboutViewController.m
 //  WordSearch
 //
 //  Created by Rodrigo Silva on 5/13/15.
 //  Copyright (c) 2015 Rodrigo Silva. All rights reserved.
 //
 
-#import "ScoreViewController.h"
+#import "AboutViewController.h"
 
-@interface ScoreViewController ()
-
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-
+@interface AboutViewController ()
 
 @end
 
-NSArray *scoreArray;
-NSArray *score2Array;
-@implementation ScoreViewController
+@implementation AboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    score2Array = @[@"13/05/2015", @"13/05/2015", @"13/05/2015", @"13/05/2015"];
-    scoreArray = @[@"40 PTS", @"80 PTS", @"20 PTS", @"0 PTS"];
-
-    
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
     }
-    
-//    scoreArray = [self select];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 4;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.detailTextLabel.text = score2Array[indexPath.row];
-    cell.textLabel.text = scoreArray[indexPath.row];
-    return cell;
-}
-
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
-
 
 /*
 #pragma mark - Navigation
