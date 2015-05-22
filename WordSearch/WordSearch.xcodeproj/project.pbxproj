@@ -54,6 +54,7 @@
 		F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB11B0ED7960064D317 /* acerto.mp3 */; };
 		F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB31B0ED86A0064D317 /* Chablau.mp3 */; };
 		F6953FB61B0ED8F00064D317 /* 5seconds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */; };
+		F6953FB81B0EDB210064D317 /* game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB71B0EDB210064D317 /* game-over.mp3 */; };
 		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
@@ -134,6 +135,7 @@
 		F6953FB11B0ED7960064D317 /* acerto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acerto.mp3; sourceTree = "<group>"; };
 		F6953FB31B0ED86A0064D317 /* Chablau.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chablau.mp3; sourceTree = "<group>"; };
 		F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5seconds.mp3; sourceTree = "<group>"; };
+		F6953FB71B0EDB210064D317 /* game-over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-over.mp3"; sourceTree = "<group>"; };
 		F6976EB31B0304090048B25C /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreViewController.h; path = ../ScoreViewController.h; sourceTree = "<group>"; };
 		F6976EB41B0304090048B25C /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
 		F6976EB61B03046F0048B25C /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				F6953FAB1B0E866D0064D317 /* yeah.mp3 */,
 				F6953FAF1B0ED7090064D317 /* error.mp3 */,
 				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
+				F6953FB71B0EDB210064D317 /* game-over.mp3 */,
 				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
 				F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */,
 			);
@@ -514,6 +517,7 @@
 				0A1CE3851B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf in Resources */,
 				0A1CE3901B01599600D78CCD /* AkzidenzGrotesk-Light.otf in Resources */,
 				0A1CE3991B01599600D78CCD /* AkzidenzGrotesk-Medium.otf in Resources */,
+				F6953FB81B0EDB210064D317 /* game-over.mp3 in Resources */,
 				0A1CE3931B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
