@@ -18,7 +18,7 @@
 @import CoreData;
 
 
-#define qtd 147
+#define qtd 142
 
 @interface MapaViewController (){
     AVAudioPlayer *_audioPlayer;
@@ -306,23 +306,20 @@ NSDate *timerStarted;
 - (IBAction)pauseGame:(id)sender {
     
     [self pauseTimer];
-    
+    int resetGame = 0;
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
     [alert addButton:@"Quit Game" target:self selector:@selector(backToMenu)];
     [alert addButton:@"Reiniciar" target:self selector:@selector(resetGame)];
-    
-//    [alert addButton:@"Second Button" actionBlock:^(void) {
-//        NSLog(@"Second button tapped");
-//    }];
     
     [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Pause" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"Cancelar" duration:0.0f];
     
     [alert alertIsDismissed:^{
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             NSString *inMap = [prefs stringForKey:@"inMap"];
+            NSString *resetGame = [prefs stringForKey:@"resetGame"];
         NSLog(@"Restoration Identifier: %@", self.restorationIdentifier);
-        if ([inMap isEqualToString:@"1"]) {
+        if ([inMap isEqualToString:@"1"] && [resetGame isEqualToString:@"0"]) {
            [self startTimer];
         }
     }];
@@ -330,7 +327,11 @@ NSDate *timerStarted;
 
 - (void) resetGame
 {
-    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setValue:@"1" forKey:@"resetGame"];
+    [myTimer invalidate];
+    lblPoint.text = @"0";
+    [self iniciarJogo];
 }
 //MARK: Funções de Som
 - (void) som:(NSString *)audio{
