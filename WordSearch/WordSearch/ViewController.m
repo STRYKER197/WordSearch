@@ -90,4 +90,9 @@
     return isInternet;
 }
 
+- (IBAction)openGameCenter:(id)sender {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:games/game/"]];
+}
+
+
 @end
