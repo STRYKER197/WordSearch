@@ -50,9 +50,6 @@
         }
     }
     
-
-    
-    
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {
@@ -70,11 +67,9 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*Verifica se o usuário está conectado*/
-
 - (BOOL) connectedToNetwork{
     Reachability* reachability = [Reachability reachabilityWithHostName:@"google.com"];
     NetworkStatus remoteHostStatus = [reachability currentReachabilityStatus];
@@ -94,7 +89,5 @@
     }
     return isInternet;
 }
-
-
 
 @end

@@ -34,7 +34,6 @@ CLGeocoder *ceo;
 CLLocation *loc;
 NSMutableArray *numerosSorteados;
 NSTimer *myTimer;
-
 NSTimer *timer;
 double timerInterval = 20.0;
 double timerElapsed = 0.0;
@@ -260,7 +259,7 @@ NSDate *timerStarted;
                       } else {
                           [self som:@"error.mp3"];
                           AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-                          NSLog(@"Você errou - 5 segundos!, MapKitL%@ -> Search:%@", placemark.country, paisSearch);
+                          NSLog(@"Você errou - 5 segundos!, MapKit:%@ -> Search:%@", placemark.country, paisSearch);
                           counter = counter - 5;
                       }
                   }
@@ -319,15 +318,14 @@ NSDate *timerStarted;
     
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
-    SCLButton *button = [alert addButton:@"Quit Game" target:self selector:@selector(backToMenu)];
+    [alert addButton:@"Quit Game" target:self selector:@selector(backToMenu)];
+    [alert addButton:@"Reiniciar" target:self selector:@selector(resetGame)];
     
 //    [alert addButton:@"Second Button" actionBlock:^(void) {
 //        NSLog(@"Second button tapped");
 //    }];
     
     [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Pause" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"Cancelar" duration:0.0f];
-    
-    
     
     [alert alertIsDismissed:^{
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -336,10 +334,13 @@ NSDate *timerStarted;
         if ([inMap isEqualToString:@"1"]) {
            [self startTimer];
         }
-//        NSLog(@"Fechou a view customizada");
     }];
 }
 
+- (void) resetGame
+{
+    
+}
 //MARK: Funções de Som
 - (void) som:(NSString *)audio{
     NSString *path = [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] resourcePath], audio];
