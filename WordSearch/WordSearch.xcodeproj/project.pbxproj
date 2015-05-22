@@ -61,6 +61,7 @@
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
 		F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A31C681B01508900763793 /* CustomAnnotation.m */; };
+		F6D499761B0FC80C00216317 /* lose-trombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6D499751B0FC80C00216317 /* lose-trombone.mp3 */; };
 		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
 		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
 		F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */; };
@@ -150,6 +151,7 @@
 		F6976EBA1B03B6720048B25C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		F6D499751B0FC80C00216317 /* lose-trombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "lose-trombone.mp3"; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
 		F6E6879E1B01334D006D3FAE /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
 		F6E6879F1B01334D006D3FAE /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				F6953FAF1B0ED7090064D317 /* error.mp3 */,
 				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
 				F6953FB71B0EDB210064D317 /* game-over.mp3 */,
+				F6D499751B0FC80C00216317 /* lose-trombone.mp3 */,
 				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
 				F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */,
 			);
@@ -500,6 +503,7 @@
 				0A1CE38F1B01599600D78CCD /* AkzidenzGrotesk-Italic.otf in Resources */,
 				0A1CE38B1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf in Resources */,
 				0A1CE39D1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf in Resources */,
+				F6D499761B0FC80C00216317 /* lose-trombone.mp3 in Resources */,
 				0A1CE3861B01599600D78CCD /* AkzidenzGrotesk-Extended.otf in Resources */,
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
 				0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */,

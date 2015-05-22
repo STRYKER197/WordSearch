@@ -55,11 +55,6 @@ NSDate *timerStarted;
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:@"1" forKey:@"inMap"];
 
-    //CoreData
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    self.managedObjectContext = appDelegate.managedObjectContext;
-
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
@@ -145,7 +140,7 @@ NSDate *timerStarted;
     
     //(GAME-OVER) - O TEMPO ACABOU
     if (counter <= 0) {
-        [self som:@"error.mp3"];
+        [self som:@"lose-trombone.mp3"];
         [timer invalidate];
         mapKit.userInteractionEnabled = false;
         SCLAlertView *alert = [[SCLAlertView alloc] init];
@@ -157,13 +152,9 @@ NSDate *timerStarted;
         
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
         [format setDateFormat:@"MMMM dd, yyyy (EEEE) HH:mm:ss z Z"];
-        NSDate *now = [NSDate date];
-        NSString *nsstr = [format stringFromDate:now];
         
         int pontuacaoFinal = [lblPoint.text intValue];
         [[GameKitHelper sharedGameKitHelper] reportScore:pontuacaoFinal];
-        
-        [self save:lblPoint.text data:nsstr];
         
         
         NSString *texto = [NSString stringWithFormat:@" \n Sua pontuação: %@", lblPoint.text];
