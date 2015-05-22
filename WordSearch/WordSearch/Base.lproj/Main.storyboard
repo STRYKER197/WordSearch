@@ -109,9 +109,6 @@
                                         <include reference="U3Q-y3-Fgr"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="yAs-MA-qE2" kind="show" id="5Mm-gf-BZU"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world search-05" translatesAutoresizingMaskIntoConstraints="NO" id="Qpn-zg-0SZ">
                                 <rect key="frame" x="108" y="72" width="158" height="158"/>
