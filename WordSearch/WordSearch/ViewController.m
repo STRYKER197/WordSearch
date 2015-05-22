@@ -33,6 +33,7 @@
     // Inicializa a variavel de controle
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:@"0" forKey:@"inMap"];
+    [prefs setValue:@"0" forKey:@"resetGame"];
 
     NSLog(@"%@", self.restorationIdentifier);
     //Se o idioma não for portugues ou ingles o jogo não irá abrir
@@ -89,5 +90,10 @@
     }
     return isInternet;
 }
+
+- (IBAction)openGameCenter:(id)sender {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:games/game/"]];
+}
+
 
 @end

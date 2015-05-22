@@ -21,13 +21,15 @@ NSArray *score2Array;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:games/game/"]];
     
     score2Array = @[@"13/05/2015", @"13/05/2015", @"13/05/2015", @"13/05/2015"];
     scoreArray = @[@"40 PTS", @"80 PTS", @"20 PTS", @"0 PTS"];
     
 //    scoreArray = [self select];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
