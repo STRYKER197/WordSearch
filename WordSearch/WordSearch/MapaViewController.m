@@ -160,7 +160,7 @@ NSDate *timerStarted;
         NSDate *now = [NSDate date];
         NSString *nsstr = [format stringFromDate:now];
         
-        int pontuacaoFinal = [nsstr intValue];
+        int pontuacaoFinal = [lblPoint.text intValue];
         [[GameKitHelper sharedGameKitHelper] reportScore:pontuacaoFinal];
         
         [self save:lblPoint.text data:nsstr];
