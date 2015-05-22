@@ -57,7 +57,6 @@
 		F6953FB81B0EDB210064D317 /* game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB71B0EDB210064D317 /* game-over.mp3 */; };
 		F6953FBE1B0F7D6A0064D317 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FBB1B0F7D6A0064D317 /* GameKitHelper.m */; };
 		F6953FBF1B0F7D6A0064D317 /* GameNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FBD1B0F7D6A0064D317 /* GameNavigationViewController.m */; };
-		F6953FC31B0F80530064D317 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FC21B0F80530064D317 /* GameKit.framework */; };
 		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
@@ -143,7 +142,6 @@
 		F6953FBB1B0F7D6A0064D317 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		F6953FBC1B0F7D6A0064D317 /* GameNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameNavigationViewController.h; sourceTree = "<group>"; };
 		F6953FBD1B0F7D6A0064D317 /* GameNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameNavigationViewController.m; sourceTree = "<group>"; };
-		F6953FC21B0F80530064D317 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		F6976EB31B0304090048B25C /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreViewController.h; path = ../ScoreViewController.h; sourceTree = "<group>"; };
 		F6976EB41B0304090048B25C /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
 		F6976EB61B03046F0048B25C /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */,
 				F6E700851AFD38CC00A48FD3 /* CoreLocation.framework in Frameworks */,
 				F6E700831AFD38C600A48FD3 /* MapKit.framework in Frameworks */,
-				F6953FC31B0F80530064D317 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +201,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A1CE3A41B0159D800D78CCD /* fonts */ = {
+		0A1CE3A41B0159D800D78CCD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				0A1CE3561B01599600D78CCD /* AkzidenzGrotesk-Bold.otf */,
@@ -247,7 +244,7 @@
 				0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */,
 				0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */,
 			);
-			name = fonts;
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		F6953FA21B0E538E0064D317 /* SplashScreen */ = {
@@ -321,7 +318,6 @@
 		F6E7004D1AFD373C00A48FD3 = {
 			isa = PBXGroup;
 			children = (
-				F6953FC21B0F80530064D317 /* GameKit.framework */,
 				F6953FAD1B0E8C030064D317 /* AVFoundation.framework */,
 				F6E700841AFD38CC00A48FD3 /* CoreLocation.framework */,
 				F6E700821AFD38C600A48FD3 /* MapKit.framework */,
@@ -351,7 +347,7 @@
 				F6953FA61B0E59BF0064D317 /* Reachability */,
 				F6953FA21B0E538E0064D317 /* SplashScreen */,
 				F6E6879C1B013301006D3FAE /* SCLAlertView */,
-				0A1CE3A41B0159D800D78CCD /* fonts */,
+				0A1CE3A41B0159D800D78CCD /* Fonts */,
 				F6A31C661B01507200763793 /* Annotation */,
 				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E700871AFD38E200A48FD3 /* Model */,
@@ -463,7 +459,7 @@
 						CreatedOnToolsVersion = 6.3;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};

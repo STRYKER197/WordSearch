@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.navigationController.delegate = self;
     BOOL statusConexao = [self connectedToNetwork];
     NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
@@ -31,7 +30,11 @@
     
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     
-    
+    // Inicializa a variavel de controle
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setValue:@"0" forKey:@"inMap"];
+
+    NSLog(@"%@", self.restorationIdentifier);
     //Se o idioma não for portugues ou ingles o jogo não irá abrir
     if (!([language isEqualToString:@"pt"] || [language isEqualToString:@"en"])) {
         self.view.hidden = YES;
@@ -57,6 +60,14 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    } else {
+        [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

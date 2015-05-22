@@ -25,17 +25,18 @@ NSArray *score2Array;
     
     score2Array = @[@"13/05/2015", @"13/05/2015", @"13/05/2015", @"13/05/2015"];
     scoreArray = @[@"40 PTS", @"80 PTS", @"20 PTS", @"0 PTS"];
-
     
+//    scoreArray = [self select];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
     }
-    
-//    scoreArray = [self select];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

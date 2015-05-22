@@ -1,11 +1,3 @@
-//
-//  GameKit.m
-//  ThomazRunner
-//
-//  Created by Adriana Izel on 5/9/15.
-//  Copyright (c) 2015 BEPiD. All rights reserved.
-//
-
 #import "GameKitHelper.h"
 
 NSString *const PresentAuthenticationViewController = @"present_authentication_view_controller";
@@ -72,6 +64,7 @@ BOOL _enableGameCenter;
                 }
                 else{
                     _leaderboardIdentifier = leaderboardIdentifier;
+                    NSLog(@"Leaderboard:  %@", _leaderboardIdentifier);
                 }
             }];
             

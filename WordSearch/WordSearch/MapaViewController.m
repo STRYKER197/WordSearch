@@ -14,6 +14,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
 #import "Score.h"
+#import "GameKitHelper.h"
 @import CoreData;
 
 
@@ -51,7 +52,9 @@ NSDate *timerStarted;
     [super viewDidLoad];
     
     
-    //Reproduz o jogo
+    //Altera a variavel de controle
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setValue:@"1" forKey:@"inMap"];
 
     //CoreData
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -61,9 +64,9 @@ NSDate *timerStarted;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
-        paisesArray = @[@"Canadá", @"Estados Unidos da América", @"México", @"Guatemala", @"Honduras", @"Nicarágua", @"Costa Rica", @"Panamá", @"Cuba", @"Jamaica", @"Bahamas", @"República Dominicana", @"Porto Rico", @"Haiti", @"Belize", @"Brasil", @"Guiana Francesa", @"Guiana", @"Venezuela", @"Colômbia", @"Equador", @"Peru", @"Bolívia", @"Chile", @"Paraguai", @"Argentina", @"Uruguai", @"Suriname", @"Groenlândia", @"Islândia", @"Noruega", @"Suécia", @"Finlândia", @"Dinamarca", @"Estônia", @"Letônia", @"Lituânia", @"Bielorrússia", @"Ucrânia", @"Moldávia", @"Romênia", @"Bulgária", @"Albânia", @"Grécia", @"Sérvia", @"Bósnia-Herzegovina", @"Croácia", @"Hungria", @"República da Eslovênia", @"Áustria", @"Eslováquia", @"República Checa", @"Polônia", @"Alemanha", @"Suíça", @"Itália", @"Países Baixos", @"Bélgica", @"	França", @"Espanha", @"Portugal", @"Reino Unido", @"Irlanda", @"África do Sul", @"Madagascar", @"Moçambique", @"Zimbábue", @"Botsuana", @"Namíbia", @"Maláui", @"Zâmbia", @"Angola", @"Tanzânia", @"Congo", @"Gabão", @"Quênia", @"Uganda", @"Somália", @"Etiópia", @"Sudão Do Sul", @"República Centro-Africana", @"Camarões", @"Nigéria", @"Burkina Faso", @"Togo", @"Benin", @"Gana", @"Costa Do Marfim", @"Libéria", @"Serra Leoa", @"Guiné", @"Senegal", @"Mauritânia",@"Marrocos", @"Mali", @"Argélia", @"Tunísia", @"Níger", @"Líbia", @"Chade", @"Egito", @"Sudão", @"Austrália", @"Nova Zelândia", @"Papua Nova-Guiné", @"Tasmânia", @"Rússia", @"Jordânia", @"Arábia Saudita", @"Iêmen", @"E.A.U", @"Omã", @"Iraque", @"Irã", @"Turquia", @"Azerbaijão", @"Geórgia", @"Síria", @"Irã", @"Afeganistão", @"Paquistão", @"Tadjiquistão", @"Uzbequistão", @"Turcomenistão", @"Quirguistão", @"Cazaquistão", @"Índia", @"Nepal", @"Butão", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Tailândia", @"Vietnã", @"Malásia", @"Indonésia", @"Filipinas", @"Taiwan", @"Mongólia", @"Coréia Do Norte", @"Coréia Do Sul", @"Japão"];
+        paisesArray = @[@"Canadá", @"Estados Unidos da América", @"México", @"Guatemala", @"Honduras", @"Nicarágua", @"Costa Rica", @"Panamá", @"Cuba", @"Jamaica", @"Bahamas", @"República Dominicana", @"Porto Rico", @"Haiti", @"Belize", @"Brasil", @"Guiana Francesa", @"Guiana", @"Venezuela", @"Colômbia", @"Equador", @"Peru", @"Bolívia", @"Chile", @"Paraguai", @"Argentina", @"Uruguai", @"Suriname", @"Groenlândia", @"Islândia", @"Noruega", @"Suécia", @"Finlândia", @"Dinamarca", @"Estônia", @"Letônia", @"Lituânia", @"Bielorrússia", @"Ucrânia", @"Moldávia", @"Romênia", @"Bulgária", @"Albânia", @"Grécia", @"Sérvia", @"Bósnia-Herzegovina", @"Croácia", @"Hungria", @"República da Eslovênia", @"Áustria", @"Eslováquia", @"República Checa", @"Polônia", @"Alemanha", @"Suíça", @"Itália", @"Países Baixos", @"Bélgica", @"	França", @"Espanha", @"Portugal", @"Reino Unido", @"Irlanda", @"África do Sul", @"Madagascar", @"Moçambique", @"Zimbábue", @"Botsuana", @"Namíbia", @"Maláui", @"Zâmbia", @"Angola", @"Tanzânia", @"Congo", @"Gabão", @"Quênia", @"Uganda", @"Somália", @"Etiópia", @"Sudão Do Sul", @"República Centro-Africana", @"Camarões", @"Nigéria", @"Burkina Faso", @"Togo", @"Benin", @"Gana", @"Costa Do Marfim", @"Libéria", @"Serra Leoa", @"Guiné", @"Senegal", @"Mauritânia",@"Marrocos", @"Mali", @"Argélia", @"Tunísia", @"Níger", @"Líbia", @"Chade", @"Egito", @"Sudão", @"Austrália", @"Nova Zelândia", @"Papua Nova-Guiné", @"Rússia", @"Jordânia", @"Arábia Saudita", @"Iêmen", @"E.A.U", @"Omã", @"Iraque", @"Irã", @"Turquia", @"Azerbaijão", @"Geórgia", @"Síria", @"Irã", @"Afeganistão", @"Paquistão", @"Tadjiquistão", @"Uzbequistão", @"Turcomenistão", @"Quirguistão", @"Cazaquistão", @"Índia", @"Nepal", @"Butão", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Tailândia", @"Vietnã", @"Malásia", @"Indonésia", @"Filipinas", @"Taiwan", @"Mongólia", @"Coréia Do Norte", @"Coréia Do Sul", @"Japão"];
     } else {
-        paisesArray = @[@"Canada", @"United States", @"Mexico", @"Guatemala", @"Honduras", @"Nicaragua", @"Costa Rica", @"Panama", @"Cuba", @"Jamaica", @"Bahamas", @"Dominican Republic", @"Puerto Rico", @"Haiti", @"Belize", @"Brazil", @"French Guiana", @"Guyana", @"Venezuela", @"Colombia", @"Ecuador", @"Peru", @"Bolivia", @"Chile", @"Paraguay", @"Argentina", @"Uruguay", @"Suriname", @"Greenland", @"Iceland", @"Norway", @"Sweden", @"Finland", @"Denmark", @"Estonia", @"Latvia", @"Lithuania", @"Belarus", @"Ukraine", @"Moldova", @"Romania", @"Bulgaria", @"Albania", @"Greece", @"Serbia", @"Bosnia and Herzegovina", @"Croatia", @"Hungary", @"Slovenia", @"Austria", @"Slovakia", @"Czech Republic", @"Poland", @"Germany", @"Switzerland", @"Italy", @"The Netherlands", @"Belgium", @"France", @"Spain", @"Portugal", @"United Kingdom", @"Ireland", @"South Africa", @"Madagascar", @"Mozambique", @"Zimbabwe", @"Botswana", @"Namibia", @"Malawi", @"Zambia", @"Angola", @"Tanzania", @"Congo", @"Gabon", @"Kenya", @"Uganda", @"Somalia", @"Ethiopia", @"South Sudan", @"Central African Republic", @"Cameroon", @"Nigeria", @"Burkina Faso", @"Togo", @"Benin", @"Ghana", @"Ivory Coast", @"Liberia", @"Sierra Leone", @"Guinea", @"Senegal", @"Mauritania", @"Morocco", @"Mali", @"Algeria", @"Tunisia", @"Niger", @"Libya", @"Chad", @"Egypt", @"Sudan", @"Australia", @"New Zealand", @"Papua New Guine", @"Tasmania", @"Russia", @"Jordan", @"Saudi Arabia", @"Yemen", @"United Arab Emirates", @"Oman", @"Iraq", @"Iran", @"Turkey", @"Azerbaijan", @"Georgia", @"Syria", @"Iran", @"Afghanistan", @"Pakistan", @"Tajikistan", @"Uzbekistan", @"Turkmenistan", @"Kyrgyzstan", @"Kazakhstan", @"India", @"Nepal", @"Bhutan", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Thailand", @"Vietnam", @"Malaysia", @"Indonesia", @"Philippines", @"Taiwan", @"Mongolia", @"North Korea", @"South Korea", @"Japan"];
+        paisesArray = @[@"Canada", @"United States", @"Mexico", @"Guatemala", @"Honduras", @"Nicaragua", @"Costa Rica", @"Panama", @"Cuba", @"Jamaica", @"Bahamas", @"Dominican Republic", @"Puerto Rico", @"Haiti", @"Belize", @"Brazil", @"French Guiana", @"Guyana", @"Venezuela", @"Colombia", @"Ecuador", @"Peru", @"Bolivia", @"Chile", @"Paraguay", @"Argentina", @"Uruguay", @"Suriname", @"Greenland", @"Iceland", @"Norway", @"Sweden", @"Finland", @"Denmark", @"Estonia", @"Latvia", @"Lithuania", @"Belarus", @"Ukraine", @"Moldova", @"Romania", @"Bulgaria", @"Albania", @"Greece", @"Serbia", @"Bosnia and Herzegovina", @"Croatia", @"Hungary", @"Slovenia", @"Austria", @"Slovakia", @"Czech Republic", @"Poland", @"Germany", @"Switzerland", @"Italy", @"The Netherlands", @"Belgium", @"France", @"Spain", @"Portugal", @"United Kingdom", @"Ireland", @"South Africa", @"Madagascar", @"Mozambique", @"Zimbabwe", @"Botswana", @"Namibia", @"Malawi", @"Zambia", @"Angola", @"Tanzania", @"Congo", @"Gabon", @"Kenya", @"Uganda", @"Somalia", @"Ethiopia", @"South Sudan", @"Central African Republic", @"Cameroon", @"Nigeria", @"Burkina Faso", @"Togo", @"Benin", @"Ghana", @"Ivory Coast", @"Liberia", @"Sierra Leone", @"Guinea", @"Senegal", @"Mauritania", @"Morocco", @"Mali", @"Algeria", @"Tunisia", @"Niger", @"Libya", @"Chad", @"Egypt", @"Sudan", @"Australia", @"New Zealand", @"Papua New Guine", @"Russia", @"Jordan", @"Saudi Arabia", @"Yemen", @"United Arab Emirates", @"Oman", @"Iraq", @"Iran", @"Turkey", @"Azerbaijan", @"Georgia", @"Syria", @"Iran", @"Afghanistan", @"Pakistan", @"Tajikistan", @"Uzbekistan", @"Turkmenistan", @"Kyrgyzstan", @"Kazakhstan", @"India", @"Nepal", @"Bhutan", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Thailand", @"Vietnam", @"Malaysia", @"Indonesia", @"Philippines", @"Taiwan", @"Mongolia", @"North Korea", @"South Korea", @"Japan"];
     }
     
     
@@ -158,7 +161,12 @@ NSDate *timerStarted;
         NSDate *now = [NSDate date];
         NSString *nsstr = [format stringFromDate:now];
         
+        int pontuacaoFinal = [nsstr intValue];
+        [[GameKitHelper sharedGameKitHelper] reportScore:pontuacaoFinal];
+        
         [self save:lblPoint.text data:nsstr];
+        
+        
         NSString *texto = [NSString stringWithFormat:@" \n Sua pontuação: %@", lblPoint.text];
         [alert showInfo:self title:@"Game Over" subTitle:texto closeButtonTitle:@"Ok" duration:0.0f];
     }
@@ -300,9 +308,10 @@ NSDate *timerStarted;
 }
 
 - (void)backToMenu {
-    NSLog(@"Entra aqui!");
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setValue:@"0" forKey:@"inMap"];
     [myTimer invalidate];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (IBAction)pauseGame:(id)sender {
     
@@ -316,15 +325,17 @@ NSDate *timerStarted;
 //        NSLog(@"Second button tapped");
 //    }];
     
-//    alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/yeah.mp3", [[NSBundle mainBundle] resourcePath]]];
-    
-    
     [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Pause" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"Cancelar" duration:0.0f];
     
     
     
     [alert alertIsDismissed:^{
-        [self startTimer];
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            NSString *inMap = [prefs stringForKey:@"inMap"];
+        NSLog(@"Restoration Identifier: %@", self.restorationIdentifier);
+        if ([inMap isEqualToString:@"1"]) {
+           [self startTimer];
+        }
 //        NSLog(@"Fechou a view customizada");
     }];
 }
