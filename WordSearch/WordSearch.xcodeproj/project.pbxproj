@@ -46,6 +46,7 @@
 		0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */; };
 		0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */; };
 		0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */; };
+		0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BAB7A1B1138080010693F /* Botao 74.mp3 */; };
 		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
 		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
 		F6953FAC1B0E866D0064D317 /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FAB1B0E866D0064D317 /* yeah.mp3 */; };
@@ -129,6 +130,7 @@
 		0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Regular.otf"; path = "../AkzidenzGrotesk-Regular.otf"; sourceTree = "<group>"; };
 		0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Super.otf"; path = "../AkzidenzGrotesk-Super.otf"; sourceTree = "<group>"; };
 		0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-SuperItalic.otf"; path = "../AkzidenzGrotesk-SuperItalic.otf"; sourceTree = "<group>"; };
+		0A9BAB7A1B1138080010693F /* Botao 74.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Botao 74.mp3"; sourceTree = "<group>"; };
 		F6953FA41B0E53C40064D317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = WordSearch/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				F6953FAB1B0E866D0064D317 /* yeah.mp3 */,
 				F6953FAF1B0ED7090064D317 /* error.mp3 */,
+				0A9BAB7A1B1138080010693F /* Botao 74.mp3 */,
 				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
 				F6953FB71B0EDB210064D317 /* game-over.mp3 */,
 				F6D499751B0FC80C00216317 /* lose-trombone.mp3 */,
@@ -526,6 +529,7 @@
 				0A1CE3971B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf in Resources */,
 				F6E700681AFD373C00A48FD3 /* Main.storyboard in Resources */,
 				F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */,
+				0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */,
 				0A1CE39E1B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf in Resources */,
 				0A1CE3941B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf in Resources */,
 				F6953FAC1B0E866D0064D317 /* yeah.mp3 in Resources */,
