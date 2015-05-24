@@ -47,22 +47,20 @@
 		0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */; };
 		0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */; };
 		0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BAB7A1B1138080010693F /* Botao 74.mp3 */; };
+		0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */; };
+		0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */; };
 		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
 		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
-		F6953FAC1B0E866D0064D317 /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FAB1B0E866D0064D317 /* yeah.mp3 */; };
 		F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FAD1B0E8C030064D317 /* AVFoundation.framework */; };
 		F6953FB01B0ED7090064D317 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FAF1B0ED7090064D317 /* error.mp3 */; };
 		F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB11B0ED7960064D317 /* acerto.mp3 */; };
 		F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB31B0ED86A0064D317 /* Chablau.mp3 */; };
-		F6953FB61B0ED8F00064D317 /* 5seconds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */; };
-		F6953FB81B0EDB210064D317 /* game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB71B0EDB210064D317 /* game-over.mp3 */; };
 		F6953FBE1B0F7D6A0064D317 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FBB1B0F7D6A0064D317 /* GameKitHelper.m */; };
 		F6953FBF1B0F7D6A0064D317 /* GameNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FBD1B0F7D6A0064D317 /* GameNavigationViewController.m */; };
 		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
 		F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A31C681B01508900763793 /* CustomAnnotation.m */; };
-		F6D499761B0FC80C00216317 /* lose-trombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6D499751B0FC80C00216317 /* lose-trombone.mp3 */; };
 		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
 		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
 		F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */; };
@@ -131,15 +129,14 @@
 		0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Super.otf"; path = "../AkzidenzGrotesk-Super.otf"; sourceTree = "<group>"; };
 		0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-SuperItalic.otf"; path = "../AkzidenzGrotesk-SuperItalic.otf"; sourceTree = "<group>"; };
 		0A9BAB7A1B1138080010693F /* Botao 74.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Botao 74.mp3"; sourceTree = "<group>"; };
+		0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
+		0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-09.mp3"; sourceTree = "<group>"; };
 		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		F6953FAB1B0E866D0064D317 /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
 		F6953FAD1B0E8C030064D317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F6953FAF1B0ED7090064D317 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		F6953FB11B0ED7960064D317 /* acerto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acerto.mp3; sourceTree = "<group>"; };
 		F6953FB31B0ED86A0064D317 /* Chablau.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chablau.mp3; sourceTree = "<group>"; };
-		F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5seconds.mp3; sourceTree = "<group>"; };
-		F6953FB71B0EDB210064D317 /* game-over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-over.mp3"; sourceTree = "<group>"; };
 		F6953FBA1B0F7D6A0064D317 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
 		F6953FBB1B0F7D6A0064D317 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		F6953FBC1B0F7D6A0064D317 /* GameNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameNavigationViewController.h; sourceTree = "<group>"; };
@@ -156,7 +153,6 @@
 		F69EB1601B121EE5002B0577 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = WordSearch/pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
-		F6D499751B0FC80C00216317 /* lose-trombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "lose-trombone.mp3"; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
 		F6E6879E1B01334D006D3FAE /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
 		F6E6879F1B01334D006D3FAE /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
@@ -273,14 +269,12 @@
 		F6953FAA1B0E86610064D317 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				F6953FAB1B0E866D0064D317 /* yeah.mp3 */,
 				F6953FAF1B0ED7090064D317 /* error.mp3 */,
+				0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */,
 				0A9BAB7A1B1138080010693F /* Botao 74.mp3 */,
 				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
-				F6953FB71B0EDB210064D317 /* game-over.mp3 */,
-				F6D499751B0FC80C00216317 /* lose-trombone.mp3 */,
+				0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */,
 				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
-				F6953FB51B0ED8F00064D317 /* 5seconds.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -524,9 +518,9 @@
 				0A1CE38F1B01599600D78CCD /* AkzidenzGrotesk-Italic.otf in Resources */,
 				0A1CE38B1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf in Resources */,
 				0A1CE39D1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf in Resources */,
-				F6D499761B0FC80C00216317 /* lose-trombone.mp3 in Resources */,
 				0A1CE3861B01599600D78CCD /* AkzidenzGrotesk-Extended.otf in Resources */,
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
+				0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */,
 				0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */,
 				F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */,
 				0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */,
@@ -535,6 +529,7 @@
 				0A1CE3831B01599600D78CCD /* AkzidenzGrotesk-BoldItalic.otf in Resources */,
 				0A1CE3981B01599600D78CCD /* AkzidenzGrotesk-LightSC.otf in Resources */,
 				0A1CE3871B01599600D78CCD /* AkzidenzGrotesk-ExtendedItalic.otf in Resources */,
+				0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */,
 				0A1CE3A01B01599600D78CCD /* AkzidenzGrotesk-MediumItalic.otf in Resources */,
 				0A1CE38A1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf in Resources */,
 				0A1CE38D1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf in Resources */,
@@ -550,8 +545,6 @@
 				0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */,
 				0A1CE39E1B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf in Resources */,
 				0A1CE3941B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf in Resources */,
-				F6953FAC1B0E866D0064D317 /* yeah.mp3 in Resources */,
-				F6953FB61B0ED8F00064D317 /* 5seconds.mp3 in Resources */,
 				0A1CE3921B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf in Resources */,
 				0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */,
 				0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */,
@@ -565,7 +558,6 @@
 				0A1CE3851B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf in Resources */,
 				0A1CE3901B01599600D78CCD /* AkzidenzGrotesk-Light.otf in Resources */,
 				0A1CE3991B01599600D78CCD /* AkzidenzGrotesk-Medium.otf in Resources */,
-				F6953FB81B0EDB210064D317 /* game-over.mp3 in Resources */,
 				0A1CE3931B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
