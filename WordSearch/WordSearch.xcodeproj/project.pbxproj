@@ -131,7 +131,6 @@
 		0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Super.otf"; path = "../AkzidenzGrotesk-Super.otf"; sourceTree = "<group>"; };
 		0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-SuperItalic.otf"; path = "../AkzidenzGrotesk-SuperItalic.otf"; sourceTree = "<group>"; };
 		0A9BAB7A1B1138080010693F /* Botao 74.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Botao 74.mp3"; sourceTree = "<group>"; };
-		F6953FA41B0E53C40064D317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = WordSearch/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F6953FAB1B0E866D0064D317 /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
@@ -151,6 +150,10 @@
 		F6976EB71B03046F0048B25C /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		F6976EB91B03B6720048B25C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		F6976EBA1B03B6720048B25C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		F69EB15D1B121ECA002B0577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F69EB15E1B121ECA002B0577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = WordSearch/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F69EB15F1B121EE5002B0577 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		F69EB1601B121EE5002B0577 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = WordSearch/pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		F6D499751B0FC80C00216317 /* lose-trombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "lose-trombone.mp3"; sourceTree = "<group>"; };
@@ -173,7 +176,6 @@
 		F6E700611AFD373C00A48FD3 /* WordSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordSearch.xcdatamodel; sourceTree = "<group>"; };
 		F6E700631AFD373C00A48FD3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F6E700641AFD373C00A48FD3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F6E700671AFD373C00A48FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6E700691AFD373C00A48FD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F6E700721AFD373C00A48FD3 /* WordSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E700771AFD373C00A48FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -303,6 +305,23 @@
 			name = Annotation;
 			sourceTree = "<group>";
 		};
+		F6C2FAC11B12136400A58E59 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F6E700661AFD373C00A48FD3 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		F6C2FAC21B12138100A58E59 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
+				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		F6E6879C1B013301006D3FAE /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,17 +364,16 @@
 		F6E700581AFD373C00A48FD3 /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F6C2FAC21B12138100A58E59 /* AppDelegate */,
+				F6C2FAC11B12136400A58E59 /* Storyboard */,
 				F6953FB91B0F7D5D0064D317 /* GameCenter */,
 				F6953FAA1B0E86610064D317 /* Sounds */,
-				F6E700661AFD373C00A48FD3 /* Main.storyboard */,
-				F6E7005D1AFD373C00A48FD3 /* AppDelegate.h */,
-				F6E7005E1AFD373C00A48FD3 /* AppDelegate.m */,
+				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6953FA61B0E59BF0064D317 /* Reachability */,
 				F6953FA21B0E538E0064D317 /* SplashScreen */,
 				F6E6879C1B013301006D3FAE /* SCLAlertView */,
 				0A1CE3A41B0159D800D78CCD /* Fonts */,
 				F6A31C661B01507200763793 /* Annotation */,
-				F6E700861AFD38D900A48FD3 /* Controllers */,
 				F6E700871AFD38E200A48FD3 /* Model */,
 				F6E700691AFD373C00A48FD3 /* Images.xcassets */,
 				F6E700601AFD373C00A48FD3 /* WordSearch.xcdatamodeld */,
@@ -608,7 +626,8 @@
 		F6953FA31B0E53C40064D317 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F6953FA41B0E53C40064D317 /* Base */,
+				F69EB15E1B121ECA002B0577 /* Base */,
+				F69EB1601B121EE5002B0577 /* pt */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -616,7 +635,8 @@
 		F6E700661AFD373C00A48FD3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F6E700671AFD373C00A48FD3 /* Base */,
+				F69EB15D1B121ECA002B0577 /* Base */,
+				F69EB15F1B121EE5002B0577 /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -7,6 +7,7 @@
 //
 
 #import "ScoreViewController.h"
+#import "GameKitHelper.h"
 
 @interface ScoreViewController ()
 

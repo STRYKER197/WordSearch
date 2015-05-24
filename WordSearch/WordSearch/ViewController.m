@@ -12,7 +12,7 @@
 #import "SCLAlertView.h"
 #import "CustomAnnotation.h"
 #import "Reachability.h"
-
+#import "GameKitHelper.h"
 @interface ViewController ()<MKMapViewDelegate, CLLocationManagerDelegate>
 
 @end
@@ -90,9 +90,27 @@
     }
     return isInternet;
 }
-
+//PRAGMA MARK: GameCenter
 - (IBAction)openGameCenter:(id)sender {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:games/"]];
+}
+
+- (IBAction)showLeaderboard:(id)sender {
+    GKGameCenterViewController *leaderboardController = [[GKGameCenterViewController alloc] init];
+    if (leaderboardController != NULL)
+    {
+        leaderboardController.leaderboardIdentifier = @"1";
+        leaderboardController.viewState = GKGameCenterViewControllerStateLeaderboards;
+        leaderboardController.gameCenterDelegate = self;
+        UIViewController *vc = self.view.window.rootViewController;
+        [vc presentViewController: leaderboardController animated: YES completion:nil];
+    }
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)viewController
+{
+    UIViewController *vc = self.view.window.rootViewController;
+    [vc dismissViewControllerAnimated:YES completion:nil];
 }
 
 

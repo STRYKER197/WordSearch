@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
+#import "GameKitHelper.h"
 
-@interface ViewController : UIViewController<UINavigationControllerDelegate>
+@interface ViewController : UIViewController<UINavigationControllerDelegate, GKGameCenterControllerDelegate>
 
 
 @end

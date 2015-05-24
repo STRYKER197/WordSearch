@@ -63,7 +63,6 @@ NSDate *timerStarted;
         paisesArray = @[@"Canada", @"United States", @"Mexico", @"Guatemala", @"Honduras", @"Nicaragua", @"Costa Rica", @"Panama", @"Cuba", @"Jamaica", @"Bahamas", @"Dominican Republic", @"Puerto Rico", @"Haiti", @"Belize", @"Brazil", @"French Guiana", @"Guyana", @"Venezuela", @"Colombia", @"Ecuador", @"Peru", @"Bolivia", @"Chile", @"Paraguay", @"Argentina", @"Uruguay", @"Suriname", @"Greenland", @"Iceland", @"Norway", @"Sweden", @"Finland", @"Denmark", @"Estonia", @"Latvia", @"Lithuania", @"Belarus", @"Ukraine", @"Moldova", @"Romania", @"Bulgaria", @"Albania", @"Greece", @"Serbia", @"Bosnia and Herzegovina", @"Croatia", @"Hungary", @"Slovenia", @"Austria", @"Slovakia", @"Czech Republic", @"Poland", @"Germany", @"Switzerland", @"Italy", @"The Netherlands", @"Belgium", @"France", @"Spain", @"Portugal", @"United Kingdom", @"Ireland", @"South Africa", @"Madagascar", @"Mozambique", @"Zimbabwe", @"Botswana", @"Namibia", @"Malawi", @"Zambia", @"Angola", @"Tanzania", @"Congo", @"Gabon", @"Kenya", @"Uganda", @"Somalia", @"Ethiopia", @"South Sudan", @"Central African Republic", @"Cameroon", @"Nigeria", @"Burkina Faso", @"Togo", @"Benin", @"Ghana", @"Ivory Coast", @"Liberia", @"Sierra Leone", @"Guinea", @"Senegal", @"Mauritania", @"Morocco", @"Mali", @"Algeria", @"Tunisia", @"Niger", @"Libya", @"Chad", @"Egypt", @"Sudan", @"Australia", @"New Zealand", @"Papua New Guine", @"Russia", @"Jordan", @"Saudi Arabia", @"Yemen", @"United Arab Emirates", @"Oman", @"Iraq", @"Iran", @"Turkey", @"Azerbaijan", @"Georgia", @"Syria", @"Iran", @"Afghanistan", @"Pakistan", @"Tajikistan", @"Uzbekistan", @"Turkmenistan", @"Kyrgyzstan", @"Kazakhstan", @"India", @"Nepal", @"Bhutan", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Thailand", @"Vietnam", @"Malaysia", @"Indonesia", @"Philippines", @"Taiwan", @"Mongolia", @"North Korea", @"South Korea", @"Japan"];
     }
     
-    
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
     //Tempo a ser pressionado
     toqueLongo.minimumPressDuration = 0.1;
@@ -80,13 +79,10 @@ NSDate *timerStarted;
               }];
     //Inicia o jogo
     [self iniciarJogo];
- 
+    
     //Tipo do mapa
     mapKit.mapType = MKMapTypeStandard;
     mapKit.delegate = self;
-    //Idioma do mapa
-    
-
 }
 
 - (void) iniciarJogo
@@ -216,7 +212,6 @@ NSDate *timerStarted;
     }
 }
 
-
 - (void) save: (NSString *)pontuacao data:(NSString *)data
 {
     Score *sc = [NSEntityDescription insertNewObjectForEntityForName:@"Score" inManagedObjectContext:self.managedObjectContext];
@@ -262,7 +257,6 @@ NSDate *timerStarted;
                                        userInfo:nil
                                         repeats:NO];
 
-    
     }
 }
                      
@@ -306,7 +300,6 @@ NSDate *timerStarted;
 - (IBAction)pauseGame:(id)sender {
     
     [self pauseTimer];
-    int resetGame = 0;
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
     [alert addButton:@"Quit Game" target:self selector:@selector(backToMenu)];
