@@ -45,7 +45,7 @@
     } else {
         if (statusConexao == false) {
             self.view.hidden = YES;
-            NSString *msg = @"Este jogo exige conexão a internet!";
+            NSString *msg = @"Este jogo exige conexão à internet!";
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"World Search" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
         }
