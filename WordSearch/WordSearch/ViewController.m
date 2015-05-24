@@ -92,7 +92,7 @@
 }
 
 - (IBAction)openGameCenter:(id)sender {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:games/game/"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:games/"]];
 }
 
 
