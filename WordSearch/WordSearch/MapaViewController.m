@@ -60,9 +60,17 @@ NSDate *timerStarted;
     if ([language isEqualToString:@"pt"]) {
         paisesArray = @[@"Canadá", @"Estados Unidos da América", @"México", @"Guatemala", @"Honduras", @"Nicarágua", @"Costa Rica", @"Panamá", @"Cuba", @"Jamaica", @"Bahamas", @"República Dominicana", @"Haiti", @"Belize", @"Brasil", @"Guiana Francesa", @"Guiana", @"Venezuela", @"Colômbia", @"Equador", @"Peru", @"Bolívia", @"Chile", @"Paraguai", @"Argentina", @"Uruguai", @"Suriname", @"Groenlândia", @"Islândia", @"Noruega", @"Suécia", @"Finlândia", @"Dinamarca", @"Estônia", @"Letônia", @"Lituânia", @"Bielorrússia", @"Ucrânia", @"Moldávia", @"Romênia", @"Bulgária", @"Albânia", @"Grécia", @"Sérvia", @"Bósnia-Herzegovina", @"Croácia", @"Hungria", @"República da Eslovênia", @"Áustria", @"Eslováquia", @"República Checa", @"Polônia", @"Alemanha", @"Suíça", @"Itália", @"Países Baixos", @"Bélgica", @"França", @"Espanha", @"Portugal", @"Reino Unido", @"Irlanda", @"África do Sul", @"Madagascar", @"Moçambique", @"Zimbábue", @"Botsuana", @"Namíbia", @"Maláui", @"Zâmbia", @"Angola", @"Tanzânia", @"Congo", @"Gabão", @"Quênia", @"Uganda", @"Somália", @"Etiópia", @"Sudão do Sul", @"República Centro-Africana", @"Camarões", @"Nigéria", @"Burkina Faso", @"Togo", @"Benin", @"Gana", @"Costa do Marfim", @"Libéria", @"Serra Leoa", @"Guiné", @"Senegal", @"Mauritânia",@"Marrocos", @"Mali", @"Argélia", @"Tunísia", @"Níger", @"Líbia", @"Chade", @"Egito", @"Sudão", @"Austrália", @"Nova Zelândia", @"Papua Nova-Guiné", @"Rússia", @"Jordânia", @"Arábia Saudita", @"Iêmen", @"E.A.U.", @"Omã", @"Iraque", @"Irã", @"Turquia", @"Azerbaijão", @"Geórgia", @"Síria", @"Irã", @"Afeganistão", @"Paquistão", @"Tadjiquistão", @"Uzbequistão", @"Turcomenistão", @"Quirguistão", @"Cazaquistão", @"Índia", @"Nepal", @"Butão", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar (Birmânia)", @"Laos", @"Tailândia", @"Vietnã", @"Malásia", @"Indonésia", @"Filipinas", @"Taiwan", @"Mongólia", @"Coreia do Norte", @"Coreia do Sul", @"Japão"];
         
-        languageArray = @[@"Instruções", @"Toque e Segure na área do País solicitado para pontuar.", @"Começar o jogo"];
+        languageArray = @[
+                @"Instruções", @"Toque e Segure na área do País solicitado para pontuar.", @"Começar o jogo",
+                @"Fim de Jogo", @"Pontuação: %@", @"Ok",
+                @"Pause", @"Não vale procurar no atlas ok?!", @"Cancelar"
+                        ];
     } else {
         paisesArray = @[@"Canada", @"United States", @"Mexico", @"Guatemala", @"Honduras", @"Nicaragua", @"Costa Rica", @"Panama", @"Cuba", @"Jamaica", @"Bahamas", @"Dominican Republic", @"Haiti", @"Belize", @"Brazil", @"French Guiana", @"Guyana", @"Venezuela", @"Colombia", @"Ecuador", @"Peru", @"Bolivia", @"Chile", @"Paraguay", @"Argentina", @"Uruguay", @"Suriname", @"Greenland", @"Iceland", @"Norway", @"Sweden", @"Finland", @"Denmark", @"Estonia", @"Latvia", @"Lithuania", @"Belarus", @"Ukraine", @"Moldova", @"Romania", @"Bulgaria", @"Albania", @"Greece", @"Serbia", @"Bosnia and Herzegovina", @"Croatia", @"Hungary", @"Slovenia", @"Austria", @"Slovakia", @"Czech Republic", @"Poland", @"Germany", @"Switzerland", @"Italy", @"The Netherlands", @"Belgium", @"France", @"Spain", @"Portugal", @"United Kingdom", @"Ireland", @"South Africa", @"Madagascar", @"Mozambique", @"Zimbabwe", @"Botswana", @"Namibia", @"Malawi", @"Zambia", @"Angola", @"Tanzania", @"Congo", @"Gabon", @"Kenya", @"Uganda", @"Somalia", @"Ethiopia", @"South Sudan", @"Central African Republic", @"Cameroon", @"Nigeria", @"Burkina Faso", @"Togo", @"Benin", @"Ghana", @"Ivory Coast", @"Liberia", @"Sierra Leone", @"Guinea", @"Senegal", @"Mauritania", @"Morocco", @"Mali", @"Algeria", @"Tunisia", @"Niger", @"Libya", @"Chad", @"Egypt", @"Sudan", @"Australia", @"New Zealand", @"Papua New Guine", @"Russia", @"Jordan", @"Saudi Arabia", @"Yemen", @"United Arab Emirates", @"Oman", @"Iraq", @"Iran", @"Turkey", @"Azerbaijan", @"Georgia", @"Syria", @"Iran", @"Afghanistan", @"Pakistan", @"Tajikistan", @"Uzbekistan", @"Turkmenistan", @"Kyrgyzstan", @"Kazakhstan", @"India", @"Nepal", @"Bhutan", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Thailand", @"Vietnam", @"Malaysia", @"Indonesia", @"Philippines", @"Taiwan", @"Mongolia", @"North Korea", @"South Korea", @"Japan"];
+        languageArray = @[
+                          @"Instructions", @"Tap and Hold the Country area requested to score.", @"Start the game",
+                          @"Game Over", @"Score: %@",@"Okay",
+                          @"Pause", @"Not worth looking at the atlas ok ?!", @"Cancel"];
     }
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
@@ -97,8 +105,11 @@ NSDate *timerStarted;
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
     
     alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [[NSBundle mainBundle] resourcePath]]];
+    NSString *titulo = [languageArray objectAtIndex:0];
+    NSString *content = [languageArray objectAtIndex:1];
+    NSString *button = [languageArray objectAtIndex:2];
     
-    [alert showSuccess:@"Instruções" subTitle:@"Toque e Segure na área do País solicitado para pontuar." closeButtonTitle:@"Começar o jogo" duration:0.0f];
+    [alert showSuccess:titulo subTitle:content closeButtonTitle:button duration:0.0f];
     [alert alertIsDismissed:^{
         [self comecarJogo];
     }];
@@ -154,9 +165,12 @@ NSDate *timerStarted;
         int pontuacaoFinal = [lblPoint.text intValue];
         [[GameKitHelper sharedGameKitHelper] reportScore:pontuacaoFinal];
         
+        NSString *titulo = [languageArray objectAtIndex:3];
+        NSString *content = [languageArray objectAtIndex:4];
+        NSString *button = [languageArray objectAtIndex:5];
         
-        NSString *texto = [NSString stringWithFormat:@"Pontuação: %@", lblPoint.text];
-        [alert showInfo:self title:@"Game Over" subTitle:texto closeButtonTitle:@"Ok" duration:0.0f];
+        NSString *texto = [NSString stringWithFormat:content, lblPoint.text];
+        [alert showInfo:self title:titulo subTitle:texto closeButtonTitle:button duration:0.0f];
     }
 }
 
@@ -289,13 +303,6 @@ NSDate *timerStarted;
     return annotationView;
 }
 
-
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    //Clicou no botão da view
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MapView" message:@"Oppa Gangnam Style" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-    [alert show];
-}
-
 - (void)backToMenu {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:@"0" forKey:@"inMap"];
@@ -309,8 +316,12 @@ NSDate *timerStarted;
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
     [alert addButton:@"Sair do Jogo" target:self selector:@selector(backToMenu)];
     [alert addButton:@"Reiniciar" target:self selector:@selector(resetGame)];
+
+    NSString *titulo = [languageArray objectAtIndex:6];
+    NSString *content = [languageArray objectAtIndex:7];
+    NSString *button = [languageArray objectAtIndex:8];
     
-    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:@"Pause" subTitle:@"Não vale procurar no atlas ok?!" closeButtonTitle:@"Cancelar" duration:0.0f];
+    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:titulo subTitle:content closeButtonTitle:button duration:0.0f];
     
     [alert alertIsDismissed:^{
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
