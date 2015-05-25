@@ -50,6 +50,8 @@
 		0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */; };
 		0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */; };
 		0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */; };
+		F60E713A1B136978008AF919 /* background2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F60E71381B136978008AF919 /* background2.mp3 */; };
+		F60E713B1B136978008AF919 /* background1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F60E71391B136978008AF919 /* background1.mp3 */; };
 		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
 		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
 		F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FAD1B0E8C030064D317 /* AVFoundation.framework */; };
@@ -133,6 +135,8 @@
 		0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-09.mp3"; sourceTree = "<group>"; };
 		0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep4.mp3; sourceTree = "<group>"; };
+		F60E71381B136978008AF919 /* background2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background2.mp3; sourceTree = "<group>"; };
+		F60E71391B136978008AF919 /* background1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background1.mp3; sourceTree = "<group>"; };
 		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F6953FAD1B0E8C030064D317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -275,6 +279,8 @@
 				0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */,
 				0A9BAB7A1B1138080010693F /* Botao 74.mp3 */,
 				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
+				F60E71381B136978008AF919 /* background2.mp3 */,
+				F60E71391B136978008AF919 /* background1.mp3 */,
 				0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */,
 				0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */,
 				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
@@ -541,6 +547,7 @@
 				F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */,
 				F6953FB01B0ED7090064D317 /* error.mp3 in Resources */,
 				0A1CE3811B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf in Resources */,
+				F60E713A1B136978008AF919 /* background2.mp3 in Resources */,
 				0A1CE3881B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf in Resources */,
 				0A1CE3821B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf in Resources */,
 				0A1CE3971B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf in Resources */,
@@ -553,6 +560,7 @@
 				0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */,
 				0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */,
 				0A1CE39C1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalic.otf in Resources */,
+				F60E713B1B136978008AF919 /* background1.mp3 in Resources */,
 				0A1CE39F1B01599600D78CCD /* AkzidenzGrotesk-MediumExtendedItalic.otf in Resources */,
 				0A1CE39B1B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf in Resources */,
 				0A1CE37F1B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf in Resources */,
