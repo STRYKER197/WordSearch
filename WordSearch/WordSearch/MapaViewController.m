@@ -243,7 +243,7 @@ NSDate *timerStarted;
                           NSLog(@"Você Acertou!");
                           [self proximoPais];
                       } else {
-                          [self som:@"error.mp3"];
+                          [self som:@"beep4.mp3"];
                           AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                           NSLog(@"Você errou - 5 segundos!, MapKit:%@ -> Search:%@", placemark.country, paisSearch);
                           counter = counter - 5;

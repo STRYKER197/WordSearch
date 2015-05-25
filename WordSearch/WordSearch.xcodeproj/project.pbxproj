@@ -49,6 +49,7 @@
 		0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BAB7A1B1138080010693F /* Botao 74.mp3 */; };
 		0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */; };
 		0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */; };
+		0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */; };
 		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
 		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
 		F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FAD1B0E8C030064D317 /* AVFoundation.framework */; };
@@ -131,6 +132,7 @@
 		0A9BAB7A1B1138080010693F /* Botao 74.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Botao 74.mp3"; sourceTree = "<group>"; };
 		0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-09.mp3"; sourceTree = "<group>"; };
+		0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep4.mp3; sourceTree = "<group>"; };
 		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F6953FAD1B0E8C030064D317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -273,6 +275,7 @@
 				0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */,
 				0A9BAB7A1B1138080010693F /* Botao 74.mp3 */,
 				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
+				0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */,
 				0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */,
 				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
 			);
@@ -520,6 +523,7 @@
 				0A1CE39D1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf in Resources */,
 				0A1CE3861B01599600D78CCD /* AkzidenzGrotesk-Extended.otf in Resources */,
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
+				0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */,
 				0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */,
 				0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */,
 				F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */,

@@ -82,8 +82,8 @@ NSTimer *durationTimer;
         kCircleHeightBackground = 62.0f;
         kActivityIndicatorHeight = 40.0f;
         kTitleTop = 24.0f;
-        kTitleHeight = 40.0f;
-        self.subTitleY = 70.0f;
+        kTitleHeight = 35.0f;
+        self.subTitleY = 65.0f;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         self.subTitleHeight = 90.0f;
@@ -104,7 +104,7 @@ NSTimer *durationTimer;
         _bodyTextFontFamily = @"HelveticaNeue";
         _buttonsFontFamily = @"HelveticaNeue-Bold";
         _titleFontSize = 20.0f;
-        _bodyFontSize = 14.0f;
+        _bodyFontSize = 15.0f;
         _buttonsFontSize = 14.0f;
         
         // Init
