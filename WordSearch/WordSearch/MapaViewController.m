@@ -65,7 +65,7 @@ NSDate *timerStarted;
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
     //Tempo a ser pressionado
-    toqueLongo.minimumPressDuration = 0.2;
+    toqueLongo.minimumPressDuration = 0.1;
     [mapKit addGestureRecognizer:toqueLongo];
     
     //Inicia o GeoCoder
