@@ -10,12 +10,12 @@
             <string>AkzidenzGroteskBQ-Cnd</string>
             <string>AkzidenzGroteskBQ-Cnd</string>
             <string>AkzidenzGroteskBQ-Cnd</string>
-            <string>AkzidenzGroteskBQ-Cnd</string>
-            <string>AkzidenzGroteskBQ-Cnd</string>
-            <string>AkzidenzGroteskBQ-Cnd</string>
         </mutableArray>
-        <mutableArray key="AkzidenzGrotesk-Medium.otf">
-            <string>AkzidenzGroteskBQ-Medium</string>
+        <mutableArray key="AkzidenzGrotesk-MediumCond.otf">
+            <string>AkzidenzGroteskBQ-MdCnd</string>
+            <string>AkzidenzGroteskBQ-MdCnd</string>
+            <string>AkzidenzGroteskBQ-MdCnd</string>
+            <string>AkzidenzGroteskBQ-MdCnd</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -44,41 +44,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-i0-4wj">
-                                <rect key="frame" x="0.0" y="352" width="375" height="100"/>
-                                <color key="backgroundColor" red="0.023529411764705882" green="0.58039215686274515" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="NYg-f9-GzO"/>
-                                    <constraint firstAttribute="height" constant="60" id="PA2-UG-fm6"/>
-                                    <constraint firstAttribute="height" constant="101.5" id="U3Q-y3-Fgr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="60"/>
-                                <state key="normal" title="Leaderboards">
-                                    <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="NYg-f9-GzO"/>
-                                        <exclude reference="PA2-UG-fm6"/>
-                                        <exclude reference="U3Q-y3-Fgr"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="NYg-f9-GzO"/>
-                                        <include reference="PA2-UG-fm6"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="U3Q-y3-Fgr"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="showLeaderboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtt-gl-dsZ"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world search-05" translatesAutoresizingMaskIntoConstraints="NO" id="Qpn-zg-0SZ">
                                 <rect key="frame" x="108" y="72" width="158" height="158"/>
                                 <constraints>
@@ -110,7 +75,7 @@
                                     <constraint firstAttribute="height" constant="101.5" id="B32-rv-laS"/>
                                     <constraint firstAttribute="width" constant="375" id="HKt-5g-jUR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-MdCnd" family="Akzidenz-Grotesk BQ" pointSize="60"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,7 +112,7 @@
                                     <constraint firstAttribute="height" constant="100" id="NT5-0u-vm9"/>
                                     <constraint firstAttribute="height" constant="60" id="PhL-7B-CUU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-MdCnd" family="Akzidenz-Grotesk BQ" pointSize="60"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,6 +137,41 @@
                                 </variation>
                                 <connections>
                                     <segue destination="vxr-VT-eJg" kind="show" id="Cxm-4W-DoY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-i0-4wj">
+                                <rect key="frame" x="0.0" y="352" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.58039215686274515" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="NYg-f9-GzO"/>
+                                    <constraint firstAttribute="height" constant="60" id="PA2-UG-fm6"/>
+                                    <constraint firstAttribute="height" constant="101.5" id="U3Q-y3-Fgr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-MdCnd" family="Akzidenz-Grotesk BQ" pointSize="60"/>
+                                <state key="normal" title="Leaderboards">
+                                    <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NYg-f9-GzO"/>
+                                        <exclude reference="PA2-UG-fm6"/>
+                                        <exclude reference="U3Q-y3-Fgr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="NYg-f9-GzO"/>
+                                        <include reference="PA2-UG-fm6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="U3Q-y3-Fgr"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtt-gl-dsZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -374,7 +374,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="VhH-Ub-DSL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Medium" family="Akzidenz-Grotesk BQ" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-MdCnd" family="Akzidenz-Grotesk BQ" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
