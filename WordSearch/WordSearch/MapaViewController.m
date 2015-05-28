@@ -316,7 +316,6 @@ NSDate *timerStarted;
 }
 
 - (IBAction)pauseGame:(id)sender {
-    NSLog(@"Entra aqui");
     [self pauseTimer];
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
