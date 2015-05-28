@@ -3,7 +3,7 @@
 //  WordSearch
 //
 //  Created by Rodrigo Silva on 5/8/15.
-//  Copyright (c) 2015 Rodrigo Silva. All rights reserved.
+//  Copyright (c) 2515 Rodrigo Silva. All rights reserved.
 //
 
 #import "MapaViewController.h"
@@ -36,7 +36,7 @@ CLLocation *loc;
 NSMutableArray *numerosSorteados;
 NSTimer *myTimer;
 NSTimer *timer;
-double timerInterval = 20.0;
+double timerInterval = 25.0;
 double timerElapsed = 0.0;
 NSDate *timerStarted;
 
@@ -51,42 +51,43 @@ NSDate *timerStarted;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     //Altera a variavel de controle
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:@"1" forKey:@"inMap"];
-
+    
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     //Define o idioma dos paises do jogo.
     if ([language isEqualToString:@"pt"]) {
         paisesArray = @[@"Canadá", @"Estados Unidos da América", @"México", @"Guatemala", @"Honduras", @"Nicarágua", @"Costa Rica", @"Panamá", @"Cuba", @"Jamaica", @"Bahamas", @"República Dominicana", @"Haiti", @"Belize", @"Brasil", @"Guiana Francesa", @"Guiana", @"Venezuela", @"Colômbia", @"Equador", @"Peru", @"Bolívia", @"Chile", @"Paraguai", @"Argentina", @"Uruguai", @"Suriname", @"Groenlândia", @"Islândia", @"Noruega", @"Suécia", @"Finlândia", @"Dinamarca", @"Estônia", @"Letônia", @"Lituânia", @"Bielorrússia", @"Ucrânia", @"Moldávia", @"Romênia", @"Bulgária", @"Albânia", @"Grécia", @"Sérvia", @"Bósnia-Herzegovina", @"Croácia", @"Hungria", @"República da Eslovênia", @"Áustria", @"Eslováquia", @"República Checa", @"Polônia", @"Alemanha", @"Suíça", @"Itália", @"Países Baixos", @"Bélgica", @"França", @"Espanha", @"Portugal", @"Reino Unido", @"Irlanda", @"África do Sul", @"Madagascar", @"Moçambique", @"Zimbábue", @"Botsuana", @"Namíbia", @"Maláui", @"Zâmbia", @"Angola", @"Tanzânia", @"Congo", @"Gabão", @"Quênia", @"Uganda", @"Somália", @"Etiópia", @"Sudão do Sul", @"República Centro-Africana", @"Camarões", @"Nigéria", @"Burkina Faso", @"Togo", @"Benin", @"Gana", @"Costa do Marfim", @"Libéria", @"Serra Leoa", @"Guiné", @"Senegal", @"Mauritânia",@"Marrocos", @"Mali", @"Argélia", @"Tunísia", @"Níger", @"Líbia", @"Chade", @"Egito", @"Sudão", @"Austrália", @"Nova Zelândia", @"Papua Nova-Guiné", @"Rússia", @"Jordânia", @"Arábia Saudita", @"Iêmen", @"E.A.U.", @"Omã", @"Iraque", @"Irã", @"Turquia", @"Azerbaijão", @"Geórgia", @"Síria", @"Irã", @"Afeganistão", @"Paquistão", @"Tadjiquistão", @"Uzbequistão", @"Turcomenistão", @"Quirguistão", @"Cazaquistão", @"Índia", @"Nepal", @"Butão", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar (Birmânia)", @"Laos", @"Tailândia", @"Vietnã", @"Malásia", @"Indonésia", @"Filipinas", @"Taiwan", @"Mongólia", @"Coreia do Norte", @"Coreia do Sul", @"Japão"];
         
         languageArray = @[
-                @"Instruções", @"Pressione e Segure na área do País solicitado para pontuar.", @"Começar o jogo",
-                @"Fim de Jogo", @"Pontuação: %@", @"Ok",
-                @"Pause", @"Não vale procurar no atlas ok?", @"Cancelar", @"Sair do Jogo", @"Reiniciar"
-                        ];
+                          @"Instruções", @"Pressione e Segure na área do País solicitado para pontuar.", @"Começar o jogo",
+                          @"Fim de Jogo", @"Pontuação: %@", @"Ok",
+                          @"Pause", @"Não vale procurar no atlas ok?", @"Cancelar", @"Sair do Jogo", @"Reiniciar", @"Continuar"
+                          ];
     } else {
         paisesArray = @[@"Canada", @"United States", @"Mexico", @"Guatemala", @"Honduras", @"Nicaragua", @"Costa Rica", @"Panama", @"Cuba", @"Jamaica", @"Bahamas", @"Dominican Republic", @"Haiti", @"Belize", @"Brazil", @"French Guiana", @"Guyana", @"Venezuela", @"Colombia", @"Ecuador", @"Peru", @"Bolivia", @"Chile", @"Paraguay", @"Argentina", @"Uruguay", @"Suriname", @"Greenland", @"Iceland", @"Norway", @"Sweden", @"Finland", @"Denmark", @"Estonia", @"Latvia", @"Lithuania", @"Belarus", @"Ukraine", @"Moldova", @"Romania", @"Bulgaria", @"Albania", @"Greece", @"Serbia", @"Bosnia and Herzegovina", @"Croatia", @"Hungary", @"Slovenia", @"Austria", @"Slovakia", @"Czech Republic", @"Poland", @"Germany", @"Switzerland", @"Italy", @"The Netherlands", @"Belgium", @"France", @"Spain", @"Portugal", @"United Kingdom", @"Ireland", @"South Africa", @"Madagascar", @"Mozambique", @"Zimbabwe", @"Botswana", @"Namibia", @"Malawi", @"Zambia", @"Angola", @"Tanzania", @"Congo", @"Gabon", @"Kenya", @"Uganda", @"Somalia", @"Ethiopia", @"South Sudan", @"Central African Republic", @"Cameroon", @"Nigeria", @"Burkina Faso", @"Togo", @"Benin", @"Ghana", @"Ivory Coast", @"Liberia", @"Sierra Leone", @"Guinea", @"Senegal", @"Mauritania", @"Morocco", @"Mali", @"Algeria", @"Tunisia", @"Niger", @"Libya", @"Chad", @"Egypt", @"Sudan", @"Australia", @"New Zealand", @"Papua New Guine", @"Russia", @"Jordan", @"Saudi Arabia", @"Yemen", @"United Arab Emirates", @"Oman", @"Iraq", @"Iran", @"Turkey", @"Azerbaijan", @"Georgia", @"Syria", @"Iran", @"Afghanistan", @"Pakistan", @"Tajikistan", @"Uzbekistan", @"Turkmenistan", @"Kyrgyzstan", @"Kazakhstan", @"India", @"Nepal", @"Bhutan", @"Sri Lanka", @"Bangladesh", @"China", @"Myanmar", @"Laos", @"Thailand", @"Vietnam", @"Malaysia", @"Indonesia", @"Philippines", @"Taiwan", @"Mongolia", @"North Korea", @"South Korea", @"Japan"];
         
         languageArray = @[
                           @"Instructions", @"Tap and Hold the requested Country area to score.", @"Start the game",
                           @"Game Over", @"Score: %@",@"Okay",
-                          @"Pause", @"Don't search at the atlas ok?", @"Cancel", @"Quit Game", @"Reset Game"];
+                          @"Pause", @"Don't search at the atlas ok?", @"Cancel", @"Quit Game", @"Reset Game", @"Continue"];
     }
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
     //Tempo a ser pressionado
-    toqueLongo.minimumPressDuration = 0.1;
+    toqueLongo.minimumPressDuration = 0.15;
     [mapKit addGestureRecognizer:toqueLongo];
     
     //Inicia o GeoCoder
     ceo = [[CLGeocoder alloc]init];
     loc = [[CLLocation alloc]initWithLatitude:32.00 longitude:21.322]; //insert your coordinatesz
-
+    
     [ceo reverseGeocodeLocation:loc
               completionHandler:^(NSArray *placemarks, NSError *error) {
                   NSLog(@"Iniciando GeoCoder");
-              
+                  
               }];
     //Inicia o jogo
     [self iniciarJogo];
@@ -100,7 +101,7 @@ NSDate *timerStarted;
 {
     int numberRandom = arc4random_uniform(qtd);
     paisSearch = paisesArray[numberRandom];
-//    NSString *texto = [NSString stringWithFormat:@"Procure por: %@", paisSearch];
+    //    NSString *texto = [NSString stringWithFormat:@"Procure por: %@", paisSearch];
     lblPais.text = paisSearch;
     
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
@@ -183,7 +184,7 @@ NSDate *timerStarted;
 
 - (void) comecarJogo
 {
-    [self startCountdown:20];
+    [self startCountdown:25];
 }
 
 
@@ -192,13 +193,13 @@ NSDate *timerStarted;
     if ([lblTime.text intValue] >= 0) {
         pontuacao = pontuacao + [lblTime.text intValue];
     }
-
+    
     lblPoint.text = [NSString stringWithFormat:@"%ld",pontuacao];
 }
 
 - (void) proximoPais
 {
-    counter = 20;
+    counter = 25;
     //Seleciona o proximo pais.
     int numberRandom = arc4random_uniform(qtd);
     paisSearch = paisesArray[numberRandom];
@@ -222,9 +223,9 @@ NSDate *timerStarted;
         while (contador > 0) {
             contador = 0;
             int n = arc4random_uniform(qtd);
-        for (int i=0; i<numerosSorteados.count; i++) {
-            if (numerosSorteados[i] == [NSDecimalNumber numberWithInt:n]) {
-                contador++;
+            for (int i=0; i<numerosSorteados.count; i++) {
+                if (numerosSorteados[i] == [NSDecimalNumber numberWithInt:n]) {
+                    contador++;
                 }
             }
         }
@@ -235,7 +236,7 @@ NSDate *timerStarted;
 - (void) save: (NSString *)pontuacao data:(NSString *)data
 {
     Score *sc = [NSEntityDescription insertNewObjectForEntityForName:@"Score" inManagedObjectContext:self.managedObjectContext];
-
+    
     sc.pontuacao = pontuacao;
     sc.data = data;
     NSError *error;
@@ -250,7 +251,7 @@ NSDate *timerStarted;
         CLLocationCoordinate2D coordenadas = [mapKit convertPoint:ponto toCoordinateFromView:mapKit];
         MKPointAnnotation *pino = [[MKPointAnnotation alloc] init];
         pino.coordinate = coordenadas;
-
+        
         ceo = [[CLGeocoder alloc]init];
         loc = [[CLLocation alloc]initWithLatitude:pino.coordinate.latitude longitude:pino.coordinate.longitude]; //insert your coordinatesz
         [ceo reverseGeocodeLocation:loc
@@ -276,10 +277,10 @@ NSDate *timerStarted;
                                        selector:@selector(removerPino)
                                        userInfo:nil
                                         repeats:NO];
-
+        
     }
 }
-                     
+
 - (void) removerPino
 {
     [mapKit removeAnnotation:[mapKit.annotations lastObject]];
@@ -310,6 +311,7 @@ NSDate *timerStarted;
     [myTimer invalidate];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 - (IBAction)pauseGame:(id)sender {
     
     [self pauseTimer];
@@ -318,26 +320,33 @@ NSDate *timerStarted;
     
     NSString *stringSairJogo = [languageArray objectAtIndex:9];
     NSString *stringResetarJogo = [languageArray objectAtIndex:10];
-    [alert addButton:stringSairJogo target:self selector:@selector(backToMenu)];
+    NSString *stringContinuarJogo = [languageArray objectAtIndex:11];
+    
+    [alert addButton:stringContinuarJogo target:self selector:@selector(resumeGame)];
     [alert addButton:stringResetarJogo target:self selector:@selector(resetGame)];
-
+    [alert addButton:stringSairJogo target:self selector:@selector(backToMenu)];
+    
     NSString *titulo = [languageArray objectAtIndex:6];
     NSString *content = [languageArray objectAtIndex:7];
-    NSString *button = [languageArray objectAtIndex:8];
+    //    NSString *button = [languageArray objectAtIndex:8];
     
-    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:titulo subTitle:content closeButtonTitle:button duration:0.0f];
+    [alert showCustom:self image:[UIImage imageNamed:@"gear.png"] color:color title:titulo subTitle:content closeButtonTitle:nil duration:0.0f];
     
     [alert alertIsDismissed:^{
-            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            NSString *inMap = [prefs stringForKey:@"inMap"];
-            NSString *resetGame = [prefs stringForKey:@"resetGame"];
-        NSLog(@"Restoration Identifier: %@", self.restorationIdentifier);
-        if ([inMap isEqualToString:@"1"] && [resetGame isEqualToString:@"0"]) {
-           [self startTimer];
-        }
+        
     }];
 }
 
+- (void)resumeGame
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *inMap = [prefs stringForKey:@"inMap"];
+    NSString *resetGame = [prefs stringForKey:@"resetGame"];
+    NSLog(@"Restoration Identifier: %@", self.restorationIdentifier);
+    if ([inMap isEqualToString:@"1"] && [resetGame isEqualToString:@"0"]) {
+        [self startTimer];
+    }
+}
 - (void) resetGame
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -361,7 +370,7 @@ NSDate *timerStarted;
 -(void) fired {
     [myTimer invalidate];
     myTimer = nil;
-//    timerElapsed = 0.0;
+    //    timerElapsed = 0.0;
     [self startTimer];
     // react to timer event here
 }
