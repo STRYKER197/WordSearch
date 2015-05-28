@@ -183,7 +183,7 @@ NSDate *timerStarted;
 
 - (void) comecarJogo
 {
-    [self startCountdown:20];
+    [self startCountdown:25];
 }
 
 
@@ -198,7 +198,7 @@ NSDate *timerStarted;
 
 - (void) proximoPais
 {
-    counter = 20;
+    counter = 25;
     //Seleciona o proximo pais.
     int numberRandom = arc4random_uniform(qtd);
     paisSearch = paisesArray[numberRandom];
