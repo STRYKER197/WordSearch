@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:101 green:186 blue:105 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:101 green:186 blue:105 alpha:1.0]];
+
     if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {

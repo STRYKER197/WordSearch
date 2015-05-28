@@ -3,7 +3,7 @@
 //  WordSearch
 //
 //  Created by Rodrigo Silva on 5/8/15.
-//  Copyright (c) 2515 Rodrigo Silva. All rights reserved.
+//  Copyright (c) 2015 Rodrigo Silva. All rights reserved.
 //
 
 #import "MapaViewController.h"
@@ -37,6 +37,7 @@ NSMutableArray *numerosSorteados;
 NSTimer *myTimer;
 NSTimer *timer;
 double timerInterval = 25.0;
+int gameTime = 25;
 double timerElapsed = 0.0;
 NSDate *timerStarted;
 
@@ -51,7 +52,8 @@ NSDate *timerStarted;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    lblPoint.text = @"0";
+    lblTime.text = [NSString stringWithFormat:@"%d", gameTime];
     //Altera a variavel de controle
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:@"1" forKey:@"inMap"];
@@ -72,7 +74,7 @@ NSDate *timerStarted;
         languageArray = @[
                           @"Instructions", @"Tap and Hold the requested Country area to score.", @"Start the game",
                           @"Game Over", @"Score: %@",@"Ok",
-                          @"Pause", @"Don't search at the atlas ok?", @"Cancel", @"Quit Game", @"Reset Game"];
+                          @"Pause", @"Don't search at the atlas ok?", @"Cancel", @"Quit Game", @"Reset Game", @"Continue"];
     }
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
@@ -103,6 +105,7 @@ NSDate *timerStarted;
     paisSearch = paisesArray[numberRandom];
     //    NSString *texto = [NSString stringWithFormat:@"Procure por: %@", paisSearch];
     lblPais.text = paisSearch;
+    
     
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
     
@@ -184,7 +187,7 @@ NSDate *timerStarted;
 
 - (void) comecarJogo
 {
-    [self startCountdown:25];
+    [self startCountdown:gameTime];
 }
 
 
@@ -199,7 +202,7 @@ NSDate *timerStarted;
 
 - (void) proximoPais
 {
-    counter = 25;
+    counter = gameTime;
     //Seleciona o proximo pais.
     int numberRandom = arc4random_uniform(qtd);
     paisSearch = paisesArray[numberRandom];
@@ -313,7 +316,7 @@ NSDate *timerStarted;
 }
 
 - (IBAction)pauseGame:(id)sender {
-    
+    NSLog(@"Entra aqui");
     [self pauseTimer];
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     UIColor *color = [UIColor colorWithRed:65.0/255.0 green:64.0/255.0 blue:144.0/255.0 alpha:1.0];
