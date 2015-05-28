@@ -151,7 +151,7 @@ NSDate *timerStarted;
     
     //(GAME-OVER) - O TEMPO ACABOU
     if (counter <= 0) {
-        [self som:@"Chablau.mp3"];
+        [self som:@"beep-09.mp3"];
         [timer invalidate];
         mapKit.userInteractionEnabled = false;
         SCLAlertView *alert = [[SCLAlertView alloc] init];
