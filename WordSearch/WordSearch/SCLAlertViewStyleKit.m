@@ -309,8 +309,10 @@ static UIImage *imageOfEdit = nil;
     [SCLAlertViewStyleKit drawInfo];
     imageOfInfo = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    //Edit for Rodrigo
+    UIImage *imageEdit = [UIImage imageNamed:@"target"];
     
-    return imageOfInfo;
+    return imageEdit;
 }
 
 + (UIImage*)imageOfEdit
