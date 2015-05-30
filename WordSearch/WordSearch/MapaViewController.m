@@ -74,7 +74,7 @@ NSDate *timerStarted;
         languageArray = @[
                           @"Instructions", @"Tap and Hold the requested Country area to score.", @"Start the game",
                           @"Game Over", @"Score: %@",@"Ok",
-                          @"Pause", @"Don't search at the atlas ok?", @"Cancel", @"Quit Game", @"Reset Game", @"Continue"];
+                          @"Pause", @"Don't search at the atlas ok?", @"Cancel", @"Quit Game", @"Reset Game", @"Resume"];
     }
     
     UILongPressGestureRecognizer *toqueLongo = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(adicionarPino:)];
