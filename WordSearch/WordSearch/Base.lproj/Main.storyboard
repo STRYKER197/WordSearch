@@ -463,15 +463,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-eJ-8UE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-eJ-8UE">
                                 <rect key="frame" x="16" y="72" width="343" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através do email worldsearchapp@gmail.com.</string>
+                                <string key="text">Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através do email worldsearchapp@gmail.com.
+
+Desenvolvedor: Rodrigo Silva
+Designer: Michel Aragão Paz
+</string>
                                 <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Reg" family="Akzidenz-Grotesk BQ" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Y4-eJ-8UE" firstAttribute="top" secondItem="iGn-Q0-DoH" secondAttribute="bottom" constant="52" id="FW0-tA-Vcx"/>
+                            <constraint firstItem="8Y4-eJ-8UE" firstAttribute="trailing" secondItem="G9S-7q-8Kh" secondAttribute="trailingMargin" id="U2E-ZX-tbd"/>
+                            <constraint firstItem="8Y4-eJ-8UE" firstAttribute="leading" secondItem="G9S-7q-8Kh" secondAttribute="leadingMargin" id="llZ-fB-u69"/>
+                            <constraint firstItem="Jr1-RF-GKh" firstAttribute="top" secondItem="8Y4-eJ-8UE" secondAttribute="bottom" constant="228" id="tQL-YP-xzZ"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
