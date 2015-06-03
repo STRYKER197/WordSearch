@@ -7,57 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A1CE37D1B01599600D78CCD /* AkzidenzGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3561B01599600D78CCD /* AkzidenzGrotesk-Bold.otf */; };
-		0A1CE37E1B01599600D78CCD /* AkzidenzGrotesk-BoldCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3571B01599600D78CCD /* AkzidenzGrotesk-BoldCond.otf */; };
-		0A1CE37F1B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3581B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf */; };
-		0A1CE3801B01599600D78CCD /* AkzidenzGrotesk-BoldCondItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3591B01599600D78CCD /* AkzidenzGrotesk-BoldCondItalic.otf */; };
-		0A1CE3811B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35A1B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf */; };
-		0A1CE3821B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35B1B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf */; };
-		0A1CE3831B01599600D78CCD /* AkzidenzGrotesk-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35C1B01599600D78CCD /* AkzidenzGrotesk-BoldItalic.otf */; };
 		0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35D1B01599600D78CCD /* AkzidenzGrotesk-Cond.otf */; };
-		0A1CE3851B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35E1B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf */; };
-		0A1CE3861B01599600D78CCD /* AkzidenzGrotesk-Extended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35F1B01599600D78CCD /* AkzidenzGrotesk-Extended.otf */; };
-		0A1CE3871B01599600D78CCD /* AkzidenzGrotesk-ExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3601B01599600D78CCD /* AkzidenzGrotesk-ExtendedItalic.otf */; };
-		0A1CE3881B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3611B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf */; };
-		0A1CE3891B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldAlt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3621B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldAlt.otf */; };
-		0A1CE38A1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3631B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf */; };
-		0A1CE38B1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3641B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf */; };
-		0A1CE38C1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3651B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalic.otf */; };
-		0A1CE38D1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3661B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf */; };
-		0A1CE38E1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3671B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldItalic.otf */; };
-		0A1CE38F1B01599600D78CCD /* AkzidenzGrotesk-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3681B01599600D78CCD /* AkzidenzGrotesk-Italic.otf */; };
-		0A1CE3901B01599600D78CCD /* AkzidenzGrotesk-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3691B01599600D78CCD /* AkzidenzGrotesk-Light.otf */; };
-		0A1CE3911B01599600D78CCD /* AkzidenzGrotesk-LightCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE36A1B01599600D78CCD /* AkzidenzGrotesk-LightCond.otf */; };
-		0A1CE3921B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE36B1B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf */; };
-		0A1CE3931B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE36C1B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf */; };
-		0A1CE3941B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE36D1B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf */; };
-		0A1CE3951B01599600D78CCD /* AkzidenzGrotesk-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE36E1B01599600D78CCD /* AkzidenzGrotesk-LightItalic.otf */; };
-		0A1CE3961B01599600D78CCD /* AkzidenzGrotesk-LightItalicOsF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE36F1B01599600D78CCD /* AkzidenzGrotesk-LightItalicOsF.otf */; };
-		0A1CE3971B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3701B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf */; };
-		0A1CE3981B01599600D78CCD /* AkzidenzGrotesk-LightSC.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3711B01599600D78CCD /* AkzidenzGrotesk-LightSC.otf */; };
-		0A1CE3991B01599600D78CCD /* AkzidenzGrotesk-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3721B01599600D78CCD /* AkzidenzGrotesk-Medium.otf */; };
 		0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3731B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf */; };
-		0A1CE39B1B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3741B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf */; };
-		0A1CE39C1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3751B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalic.otf */; };
-		0A1CE39D1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3761B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf */; };
-		0A1CE39E1B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3771B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf */; };
-		0A1CE39F1B01599600D78CCD /* AkzidenzGrotesk-MediumExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3781B01599600D78CCD /* AkzidenzGrotesk-MediumExtendedItalic.otf */; };
-		0A1CE3A01B01599600D78CCD /* AkzidenzGrotesk-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3791B01599600D78CCD /* AkzidenzGrotesk-MediumItalic.otf */; };
 		0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */; };
-		0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */; };
-		0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */; };
-		0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BAB7A1B1138080010693F /* Botao 74.mp3 */; };
 		0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */; };
 		0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */; };
 		0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */; };
-		F60E713A1B136978008AF919 /* background2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F60E71381B136978008AF919 /* background2.mp3 */; };
-		F60E713B1B136978008AF919 /* background1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F60E71391B136978008AF919 /* background1.mp3 */; };
 		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
 		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
 		F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FAD1B0E8C030064D317 /* AVFoundation.framework */; };
-		F6953FB01B0ED7090064D317 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FAF1B0ED7090064D317 /* error.mp3 */; };
 		F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB11B0ED7960064D317 /* acerto.mp3 */; };
-		F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB31B0ED86A0064D317 /* Chablau.mp3 */; };
 		F6953FBE1B0F7D6A0064D317 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FBB1B0F7D6A0064D317 /* GameKitHelper.m */; };
 		F6953FBF1B0F7D6A0064D317 /* GameNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FBD1B0F7D6A0064D317 /* GameNavigationViewController.m */; };
 		F6976EB51B0304090048B25C /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB41B0304090048B25C /* ScoreViewController.m */; };
@@ -92,57 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A1CE3561B01599600D78CCD /* AkzidenzGrotesk-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Bold.otf"; path = "../AkzidenzGrotesk-Bold.otf"; sourceTree = "<group>"; };
-		0A1CE3571B01599600D78CCD /* AkzidenzGrotesk-BoldCond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-BoldCond.otf"; path = "../AkzidenzGrotesk-BoldCond.otf"; sourceTree = "<group>"; };
-		0A1CE3581B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-BoldCondAlt.otf"; path = "../AkzidenzGrotesk-BoldCondAlt.otf"; sourceTree = "<group>"; };
-		0A1CE3591B01599600D78CCD /* AkzidenzGrotesk-BoldCondItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-BoldCondItalic.otf"; path = "../AkzidenzGrotesk-BoldCondItalic.otf"; sourceTree = "<group>"; };
-		0A1CE35A1B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-BoldExtended.otf"; path = "../AkzidenzGrotesk-BoldExtended.otf"; sourceTree = "<group>"; };
-		0A1CE35B1B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-BoldExtendedItalic.otf"; path = "../AkzidenzGrotesk-BoldExtendedItalic.otf"; sourceTree = "<group>"; };
-		0A1CE35C1B01599600D78CCD /* AkzidenzGrotesk-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-BoldItalic.otf"; path = "../AkzidenzGrotesk-BoldItalic.otf"; sourceTree = "<group>"; };
 		0A1CE35D1B01599600D78CCD /* AkzidenzGrotesk-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Cond.otf"; path = "../AkzidenzGrotesk-Cond.otf"; sourceTree = "<group>"; };
-		0A1CE35E1B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-CondItalic.otf"; path = "../AkzidenzGrotesk-CondItalic.otf"; sourceTree = "<group>"; };
-		0A1CE35F1B01599600D78CCD /* AkzidenzGrotesk-Extended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Extended.otf"; path = "../AkzidenzGrotesk-Extended.otf"; sourceTree = "<group>"; };
-		0A1CE3601B01599600D78CCD /* AkzidenzGrotesk-ExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtendedItalic.otf"; path = "../AkzidenzGrotesk-ExtendedItalic.otf"; sourceTree = "<group>"; };
-		0A1CE3611B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBold.otf"; path = "../AkzidenzGrotesk-ExtraBold.otf"; sourceTree = "<group>"; };
-		0A1CE3621B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldAlt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBoldAlt.otf"; path = "../AkzidenzGrotesk-ExtraBoldAlt.otf"; sourceTree = "<group>"; };
-		0A1CE3631B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBoldCond.otf"; path = "../AkzidenzGrotesk-ExtraBoldCond.otf"; sourceTree = "<group>"; };
-		0A1CE3641B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBoldCondAlt.otf"; path = "../AkzidenzGrotesk-ExtraBoldCondAlt.otf"; sourceTree = "<group>"; };
-		0A1CE3651B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBoldCondItalic.otf"; path = "../AkzidenzGrotesk-ExtraBoldCondItalic.otf"; sourceTree = "<group>"; };
-		0A1CE3661B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf"; path = "../AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf"; sourceTree = "<group>"; };
-		0A1CE3671B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-ExtraBoldItalic.otf"; path = "../AkzidenzGrotesk-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
-		0A1CE3681B01599600D78CCD /* AkzidenzGrotesk-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Italic.otf"; path = "../AkzidenzGrotesk-Italic.otf"; sourceTree = "<group>"; };
-		0A1CE3691B01599600D78CCD /* AkzidenzGrotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Light.otf"; path = "../AkzidenzGrotesk-Light.otf"; sourceTree = "<group>"; };
-		0A1CE36A1B01599600D78CCD /* AkzidenzGrotesk-LightCond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightCond.otf"; path = "../AkzidenzGrotesk-LightCond.otf"; sourceTree = "<group>"; };
-		0A1CE36B1B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightCondItalic.otf"; path = "../AkzidenzGrotesk-LightCondItalic.otf"; sourceTree = "<group>"; };
-		0A1CE36C1B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightExtended.otf"; path = "../AkzidenzGrotesk-LightExtended.otf"; sourceTree = "<group>"; };
-		0A1CE36D1B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightExtendedItalic.otf"; path = "../AkzidenzGrotesk-LightExtendedItalic.otf"; sourceTree = "<group>"; };
-		0A1CE36E1B01599600D78CCD /* AkzidenzGrotesk-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightItalic.otf"; path = "../AkzidenzGrotesk-LightItalic.otf"; sourceTree = "<group>"; };
-		0A1CE36F1B01599600D78CCD /* AkzidenzGrotesk-LightItalicOsF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightItalicOsF.otf"; path = "../AkzidenzGrotesk-LightItalicOsF.otf"; sourceTree = "<group>"; };
-		0A1CE3701B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightOsF.otf"; path = "../AkzidenzGrotesk-LightOsF.otf"; sourceTree = "<group>"; };
-		0A1CE3711B01599600D78CCD /* AkzidenzGrotesk-LightSC.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-LightSC.otf"; path = "../AkzidenzGrotesk-LightSC.otf"; sourceTree = "<group>"; };
-		0A1CE3721B01599600D78CCD /* AkzidenzGrotesk-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Medium.otf"; path = "../AkzidenzGrotesk-Medium.otf"; sourceTree = "<group>"; };
 		0A1CE3731B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumCond.otf"; path = "../AkzidenzGrotesk-MediumCond.otf"; sourceTree = "<group>"; };
-		0A1CE3741B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumCondAlt.otf"; path = "../AkzidenzGrotesk-MediumCondAlt.otf"; sourceTree = "<group>"; };
-		0A1CE3751B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumCondItalic.otf"; path = "../AkzidenzGrotesk-MediumCondItalic.otf"; sourceTree = "<group>"; };
-		0A1CE3761B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumCondItalicAlt.otf"; path = "../AkzidenzGrotesk-MediumCondItalicAlt.otf"; sourceTree = "<group>"; };
-		0A1CE3771B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumExtended.otf"; path = "../AkzidenzGrotesk-MediumExtended.otf"; sourceTree = "<group>"; };
-		0A1CE3781B01599600D78CCD /* AkzidenzGrotesk-MediumExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumExtendedItalic.otf"; path = "../AkzidenzGrotesk-MediumExtendedItalic.otf"; sourceTree = "<group>"; };
-		0A1CE3791B01599600D78CCD /* AkzidenzGrotesk-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumItalic.otf"; path = "../AkzidenzGrotesk-MediumItalic.otf"; sourceTree = "<group>"; };
 		0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Regular.otf"; path = "../AkzidenzGrotesk-Regular.otf"; sourceTree = "<group>"; };
-		0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Super.otf"; path = "../AkzidenzGrotesk-Super.otf"; sourceTree = "<group>"; };
-		0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-SuperItalic.otf"; path = "../AkzidenzGrotesk-SuperItalic.otf"; sourceTree = "<group>"; };
-		0A9BAB7A1B1138080010693F /* Botao 74.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Botao 74.mp3"; sourceTree = "<group>"; };
 		0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-09.mp3"; sourceTree = "<group>"; };
 		0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep4.mp3; sourceTree = "<group>"; };
-		F60E71381B136978008AF919 /* background2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background2.mp3; sourceTree = "<group>"; };
-		F60E71391B136978008AF919 /* background1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background1.mp3; sourceTree = "<group>"; };
 		F6953FA71B0E59DC0064D317 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F6953FA81B0E59DC0064D317 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F6953FAD1B0E8C030064D317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		F6953FAF1B0ED7090064D317 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		F6953FB11B0ED7960064D317 /* acerto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acerto.mp3; sourceTree = "<group>"; };
-		F6953FB31B0ED86A0064D317 /* Chablau.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chablau.mp3; sourceTree = "<group>"; };
 		F6953FBA1B0F7D6A0064D317 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
 		F6953FBB1B0F7D6A0064D317 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		F6953FBC1B0F7D6A0064D317 /* GameNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameNavigationViewController.h; sourceTree = "<group>"; };
@@ -212,45 +130,9 @@
 		0A1CE3A41B0159D800D78CCD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0A1CE3561B01599600D78CCD /* AkzidenzGrotesk-Bold.otf */,
-				0A1CE3571B01599600D78CCD /* AkzidenzGrotesk-BoldCond.otf */,
-				0A1CE3581B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf */,
-				0A1CE3591B01599600D78CCD /* AkzidenzGrotesk-BoldCondItalic.otf */,
-				0A1CE35A1B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf */,
-				0A1CE35B1B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf */,
-				0A1CE35C1B01599600D78CCD /* AkzidenzGrotesk-BoldItalic.otf */,
 				0A1CE35D1B01599600D78CCD /* AkzidenzGrotesk-Cond.otf */,
-				0A1CE35E1B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf */,
-				0A1CE35F1B01599600D78CCD /* AkzidenzGrotesk-Extended.otf */,
-				0A1CE3601B01599600D78CCD /* AkzidenzGrotesk-ExtendedItalic.otf */,
-				0A1CE3611B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf */,
-				0A1CE3621B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldAlt.otf */,
-				0A1CE3631B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf */,
-				0A1CE3641B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf */,
-				0A1CE3651B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalic.otf */,
-				0A1CE3661B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf */,
-				0A1CE3671B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldItalic.otf */,
-				0A1CE3681B01599600D78CCD /* AkzidenzGrotesk-Italic.otf */,
-				0A1CE3691B01599600D78CCD /* AkzidenzGrotesk-Light.otf */,
-				0A1CE36A1B01599600D78CCD /* AkzidenzGrotesk-LightCond.otf */,
-				0A1CE36B1B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf */,
-				0A1CE36C1B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf */,
-				0A1CE36D1B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf */,
-				0A1CE36E1B01599600D78CCD /* AkzidenzGrotesk-LightItalic.otf */,
-				0A1CE36F1B01599600D78CCD /* AkzidenzGrotesk-LightItalicOsF.otf */,
-				0A1CE3701B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf */,
-				0A1CE3711B01599600D78CCD /* AkzidenzGrotesk-LightSC.otf */,
-				0A1CE3721B01599600D78CCD /* AkzidenzGrotesk-Medium.otf */,
 				0A1CE3731B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf */,
-				0A1CE3741B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf */,
-				0A1CE3751B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalic.otf */,
-				0A1CE3761B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf */,
-				0A1CE3771B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf */,
-				0A1CE3781B01599600D78CCD /* AkzidenzGrotesk-MediumExtendedItalic.otf */,
-				0A1CE3791B01599600D78CCD /* AkzidenzGrotesk-MediumItalic.otf */,
 				0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */,
-				0A1CE37B1B01599600D78CCD /* AkzidenzGrotesk-Super.otf */,
-				0A1CE37C1B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -275,12 +157,7 @@
 		F6953FAA1B0E86610064D317 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				F6953FAF1B0ED7090064D317 /* error.mp3 */,
 				0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */,
-				0A9BAB7A1B1138080010693F /* Botao 74.mp3 */,
-				F6953FB31B0ED86A0064D317 /* Chablau.mp3 */,
-				F60E71381B136978008AF919 /* background2.mp3 */,
-				F60E71391B136978008AF919 /* background1.mp3 */,
 				0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */,
 				0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */,
 				F6953FB11B0ED7960064D317 /* acerto.mp3 */,
@@ -520,57 +397,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1CE3801B01599600D78CCD /* AkzidenzGrotesk-BoldCondItalic.otf in Resources */,
-				0A1CE38C1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalic.otf in Resources */,
-				0A1CE38E1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldItalic.otf in Resources */,
-				0A1CE3961B01599600D78CCD /* AkzidenzGrotesk-LightItalicOsF.otf in Resources */,
-				0A1CE38F1B01599600D78CCD /* AkzidenzGrotesk-Italic.otf in Resources */,
-				0A1CE38B1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondAlt.otf in Resources */,
-				0A1CE39D1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalicAlt.otf in Resources */,
-				0A1CE3861B01599600D78CCD /* AkzidenzGrotesk-Extended.otf in Resources */,
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
 				0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */,
 				0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */,
-				0A1CE3A31B01599600D78CCD /* AkzidenzGrotesk-SuperItalic.otf in Resources */,
 				F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */,
-				0A1CE3A21B01599600D78CCD /* AkzidenzGrotesk-Super.otf in Resources */,
-				0A1CE3891B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldAlt.otf in Resources */,
-				0A1CE37D1B01599600D78CCD /* AkzidenzGrotesk-Bold.otf in Resources */,
-				0A1CE3831B01599600D78CCD /* AkzidenzGrotesk-BoldItalic.otf in Resources */,
-				0A1CE3981B01599600D78CCD /* AkzidenzGrotesk-LightSC.otf in Resources */,
-				0A1CE3871B01599600D78CCD /* AkzidenzGrotesk-ExtendedItalic.otf in Resources */,
 				0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */,
-				0A1CE3A01B01599600D78CCD /* AkzidenzGrotesk-MediumItalic.otf in Resources */,
-				0A1CE38A1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCond.otf in Resources */,
-				0A1CE38D1B01599600D78CCD /* AkzidenzGrotesk-ExtraBoldCondItalicAlt.otf in Resources */,
-				0A1CE3911B01599600D78CCD /* AkzidenzGrotesk-LightCond.otf in Resources */,
-				F6953FB41B0ED86A0064D317 /* Chablau.mp3 in Resources */,
-				F6953FB01B0ED7090064D317 /* error.mp3 in Resources */,
-				0A1CE3811B01599600D78CCD /* AkzidenzGrotesk-BoldExtended.otf in Resources */,
-				F60E713A1B136978008AF919 /* background2.mp3 in Resources */,
-				0A1CE3881B01599600D78CCD /* AkzidenzGrotesk-ExtraBold.otf in Resources */,
-				0A1CE3821B01599600D78CCD /* AkzidenzGrotesk-BoldExtendedItalic.otf in Resources */,
-				0A1CE3971B01599600D78CCD /* AkzidenzGrotesk-LightOsF.otf in Resources */,
 				F6E700681AFD373C00A48FD3 /* Main.storyboard in Resources */,
 				F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */,
-				0A9BAB7B1B1138080010693F /* Botao 74.mp3 in Resources */,
-				0A1CE39E1B01599600D78CCD /* AkzidenzGrotesk-MediumExtended.otf in Resources */,
-				0A1CE3941B01599600D78CCD /* AkzidenzGrotesk-LightExtendedItalic.otf in Resources */,
-				0A1CE3921B01599600D78CCD /* AkzidenzGrotesk-LightCondItalic.otf in Resources */,
 				0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */,
 				0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */,
-				0A1CE39C1B01599600D78CCD /* AkzidenzGrotesk-MediumCondItalic.otf in Resources */,
-				F60E713B1B136978008AF919 /* background1.mp3 in Resources */,
-				0A1CE39F1B01599600D78CCD /* AkzidenzGrotesk-MediumExtendedItalic.otf in Resources */,
-				0A1CE39B1B01599600D78CCD /* AkzidenzGrotesk-MediumCondAlt.otf in Resources */,
-				0A1CE37F1B01599600D78CCD /* AkzidenzGrotesk-BoldCondAlt.otf in Resources */,
-				0A1CE37E1B01599600D78CCD /* AkzidenzGrotesk-BoldCond.otf in Resources */,
 				F6E7006A1AFD373C00A48FD3 /* Images.xcassets in Resources */,
-				0A1CE3951B01599600D78CCD /* AkzidenzGrotesk-LightItalic.otf in Resources */,
-				0A1CE3851B01599600D78CCD /* AkzidenzGrotesk-CondItalic.otf in Resources */,
-				0A1CE3901B01599600D78CCD /* AkzidenzGrotesk-Light.otf in Resources */,
-				0A1CE3991B01599600D78CCD /* AkzidenzGrotesk-Medium.otf in Resources */,
-				0A1CE3931B01599600D78CCD /* AkzidenzGrotesk-LightExtended.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
