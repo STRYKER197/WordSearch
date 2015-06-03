@@ -179,17 +179,10 @@ NSDate *timerStarted;
     }
 }
 
-- (void) exibirMensagem:(NSString *)txtMensagem tituloMensagem:(NSString *)titulo tituloBotao:(NSString *)botao
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titulo message:txtMensagem delegate:self cancelButtonTitle:nil otherButtonTitles:botao, nil];
-    [alert show];
-}
-
 - (void) comecarJogo
 {
     [self startCountdown:gameTime];
 }
-
 
 - (void) adicionaPontuacao {
     NSInteger pontuacao = [lblPoint.text integerValue];
@@ -208,32 +201,6 @@ NSDate *timerStarted;
     paisSearch = paisesArray[numberRandom];
     lblPais.text = paisSearch;
     
-}
-
-- (int) gerarNumero
-{
-    int n = arc4random_uniform(4);
-    
-    int contador=0;
-    if (numerosSorteados.count == 4) {
-        [numerosSorteados removeAllObjects];
-    }
-    
-    if (numerosSorteados.count == 0) {
-        [numerosSorteados addObject:[NSDecimalNumber numberWithInt:n]];
-        return n;
-    } else {
-        while (contador > 0) {
-            contador = 0;
-            int n = arc4random_uniform(qtd);
-            for (int i=0; i<numerosSorteados.count; i++) {
-                if (numerosSorteados[i] == [NSDecimalNumber numberWithInt:n]) {
-                    contador++;
-                }
-            }
-        }
-        return n;
-    }
 }
 
 - (void) save: (NSString *)pontuacao data:(NSString *)data
