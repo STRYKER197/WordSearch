@@ -310,7 +310,7 @@ static UIImage *imageOfEdit = nil;
     imageOfInfo = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     //Edit for Rodrigo
-    UIImage *imageEdit = [UIImage imageNamed:@"target"];
+    UIImage *imageEdit = [UIImage imageNamed:@"xis"];
     
     return imageEdit;
 }
