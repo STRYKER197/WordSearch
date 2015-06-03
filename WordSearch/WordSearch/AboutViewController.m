@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"]) {
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:101.0/255.0 green:186.0/255.0 blue:105.0/255.0 alpha:0.0]];
+
+
+    if ([self.restorationIdentifier isEqualToString:@"menu"] || [self.restorationIdentifier isEqualToString:@"game"] || [self.restorationIdentifier isEqualToString:@"about"]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     } else {
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
