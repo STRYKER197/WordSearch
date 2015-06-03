@@ -97,6 +97,7 @@ NSDate *timerStarted;
     //Tipo do mapa
     mapKit.mapType = MKMapTypeStandard;
     mapKit.delegate = self;
+    [self setZoomLevel:2.7];
 }
 
 - (void) iniciarJogo
@@ -349,5 +350,20 @@ NSDate *timerStarted;
     myTimer = nil;
     timerElapsed = [lblTime.text doubleValue];
 }
+
+
+- (void)setZoomLevel:(NSUInteger)zoomLevel {
+    [self setCenterCoordinate:self.mapKit.centerCoordinate zoomLevel:zoomLevel animated:NO];
+}
+
+- (NSUInteger)zoomLevel {
+    return log2(360 * ((self.mapKit.frame.size.width/256) / self.mapKit.region.span.longitudeDelta)) + 1;
+}
+
+- (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate zoomLevel:(NSUInteger)zoomLevel animated:(BOOL)animated {
+    MKCoordinateSpan span = MKCoordinateSpanMake(0, 360/pow(2, zoomLevel)*self.mapKit.frame.size.width/256);
+    [self.mapKit setRegion:MKCoordinateRegionMake(centerCoordinate, span) animated:animated];
+}
+
 
 @end
