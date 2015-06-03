@@ -46,5 +46,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)closeAbout:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 @end
