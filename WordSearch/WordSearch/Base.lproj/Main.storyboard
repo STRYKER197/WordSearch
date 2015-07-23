@@ -11,6 +11,7 @@
             <string>AkzidenzGroteskBQ-Cnd</string>
             <string>AkzidenzGroteskBQ-Cnd</string>
             <string>AkzidenzGroteskBQ-Cnd</string>
+            <string>AkzidenzGroteskBQ-Cnd</string>
         </mutableArray>
         <mutableArray key="AkzidenzGrotesk-MediumCond.otf">
             <string>AkzidenzGroteskBQ-MdCnd</string>
@@ -464,44 +465,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-eJ-8UE">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">
-
-
-
-
-Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através do email worldsearchapp@gmail.com.
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-eJ-8UE">
+                                <rect key="frame" x="16" y="56" width="343" height="631"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através da nossa página do facebook World Search App.
 
 Desenvolvedor: Rodrigo Silva
 Designer: Michel Aragão Paz
 </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Reg" family="Akzidenz-Grotesk BQ" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIm-6M-nSd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                <color key="backgroundColor" red="0.094117647058823528" green="0.65490196078431373" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.46274509800000002" green="0.83137254900000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="s11-fP-8JH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.46274509800000002" green="0.83137254900000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5as-qo-Ncv">
                                 <rect key="frame" x="11" y="0.0" width="47" height="56"/>
-                                <state key="normal" title="OK"/>
+                                <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Cnd" family="Akzidenz-Grotesk BQ" pointSize="21"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="closeAbout:" destination="74v-JP-cly" eventType="touchUpInside" id="war-Ex-XEZ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.83137254900000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zIm-6M-nSd" firstAttribute="leading" secondItem="G9S-7q-8Kh" secondAttribute="leading" id="3QK-q5-aPO"/>
-                            <constraint firstItem="8Y4-eJ-8UE" firstAttribute="top" secondItem="iGn-Q0-DoH" secondAttribute="bottom" constant="8" id="FW0-tA-Vcx"/>
+                            <constraint firstItem="8Y4-eJ-8UE" firstAttribute="top" secondItem="iGn-Q0-DoH" secondAttribute="bottom" constant="36" id="FW0-tA-Vcx"/>
                             <constraint firstItem="zIm-6M-nSd" firstAttribute="top" secondItem="G9S-7q-8Kh" secondAttribute="topMargin" id="Js7-Ea-Igy"/>
                             <constraint firstAttribute="centerX" secondItem="8Y4-eJ-8UE" secondAttribute="centerX" id="R9b-ED-H5Y"/>
                             <constraint firstItem="8Y4-eJ-8UE" firstAttribute="trailing" secondItem="G9S-7q-8Kh" secondAttribute="trailingMargin" id="U2E-ZX-tbd"/>
@@ -509,11 +510,13 @@ Designer: Michel Aragão Paz
                             <constraint firstAttribute="trailingMargin" secondItem="zIm-6M-nSd" secondAttribute="trailing" constant="-16" id="dxc-MG-MoI"/>
                             <constraint firstItem="zIm-6M-nSd" firstAttribute="leading" secondItem="G9S-7q-8Kh" secondAttribute="leadingMargin" constant="-16" id="hm5-ip-L2X"/>
                             <constraint firstItem="8Y4-eJ-8UE" firstAttribute="leading" secondItem="G9S-7q-8Kh" secondAttribute="leadingMargin" id="llZ-fB-u69"/>
-                            <constraint firstItem="Jr1-RF-GKh" firstAttribute="top" secondItem="8Y4-eJ-8UE" secondAttribute="bottom" constant="8" id="v2S-c0-dcQ"/>
+                            <constraint firstItem="8Y4-eJ-8UE" firstAttribute="top" secondItem="zIm-6M-nSd" secondAttribute="bottom" id="tz0-c5-eCy"/>
+                            <constraint firstItem="Jr1-RF-GKh" firstAttribute="top" secondItem="8Y4-eJ-8UE" secondAttribute="bottom" constant="-20" id="v2S-c0-dcQ"/>
                             <constraint firstItem="zIm-6M-nSd" firstAttribute="top" secondItem="G9S-7q-8Kh" secondAttribute="top" id="yb4-Rt-lvh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="FW0-tA-Vcx"/>
                                 <exclude reference="R9b-ED-H5Y"/>
                             </mask>
                         </variation>
