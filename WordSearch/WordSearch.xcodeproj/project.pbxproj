@@ -13,7 +13,6 @@
 		0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */; };
 		0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */; };
 		0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */; };
-		F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6953FA31B0E53C40064D317 /* LaunchScreen.xib */; };
 		F6953FA91B0E59DC0064D317 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F6953FA81B0E59DC0064D317 /* Reachability.m */; };
 		F6953FAE1B0E8C030064D317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953FAD1B0E8C030064D317 /* AVFoundation.framework */; };
 		F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6953FB11B0ED7960064D317 /* acerto.mp3 */; };
@@ -72,9 +71,7 @@
 		F6976EB91B03B6720048B25C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		F6976EBA1B03B6720048B25C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		F69EB15D1B121ECA002B0577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F69EB15E1B121ECA002B0577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = WordSearch/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F69EB15F1B121EE5002B0577 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
-		F69EB1601B121EE5002B0577 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = WordSearch/pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
@@ -140,7 +137,6 @@
 		F6953FA21B0E538E0064D317 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F6953FA31B0E53C40064D317 /* LaunchScreen.xib */,
 			);
 			name = SplashScreen;
 			sourceTree = "<group>";
@@ -400,7 +396,6 @@
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
 				0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */,
 				0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */,
-				F6953FA51B0E53C40064D317 /* LaunchScreen.xib in Resources */,
 				0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */,
 				F6E700681AFD373C00A48FD3 /* Main.storyboard in Resources */,
 				F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */,
@@ -463,15 +458,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6953FA31B0E53C40064D317 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F69EB15E1B121ECA002B0577 /* Base */,
-				F69EB1601B121EE5002B0577 /* pt */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		F6E700661AFD373C00A48FD3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -570,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordSearch/Info.plist;
@@ -584,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordSearch/Info.plist;
