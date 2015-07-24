@@ -10,6 +10,7 @@
 		0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE35D1B01599600D78CCD /* AkzidenzGrotesk-Cond.otf */; };
 		0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE3731B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf */; };
 		0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */; };
+		0AD19A1A1B62C68A002834CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD19A191B62C68A002834CC /* LaunchScreen.xib */; };
 		0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */; };
 		0AF1D8BA1B127FBF001C8CC6 /* beep-09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */; };
 		0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */; };
@@ -53,6 +54,7 @@
 		0A1CE35D1B01599600D78CCD /* AkzidenzGrotesk-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Cond.otf"; path = "../AkzidenzGrotesk-Cond.otf"; sourceTree = "<group>"; };
 		0A1CE3731B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-MediumCond.otf"; path = "../AkzidenzGrotesk-MediumCond.otf"; sourceTree = "<group>"; };
 		0A1CE37A1B01599600D78CCD /* AkzidenzGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AkzidenzGrotesk-Regular.otf"; path = "../AkzidenzGrotesk-Regular.otf"; sourceTree = "<group>"; };
+		0AD19A191B62C68A002834CC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0AF1D8B71B127F53001C8CC6 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		0AF1D8B91B127FBF001C8CC6 /* beep-09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-09.mp3"; sourceTree = "<group>"; };
 		0AF1D8BB1B12BB13001C8CC6 /* beep4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep4.mp3; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		F6953FA21B0E538E0064D317 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				0AD19A191B62C68A002834CC /* LaunchScreen.xib */,
 			);
 			name = SplashScreen;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD19A1A1B62C68A002834CC /* LaunchScreen.xib in Resources */,
 				0A1CE3A11B01599600D78CCD /* AkzidenzGrotesk-Regular.otf in Resources */,
 				0AF1D8BC1B12BB13001C8CC6 /* beep4.mp3 in Resources */,
 				0AF1D8B81B127F53001C8CC6 /* beep-07.mp3 in Resources */,
@@ -556,7 +560,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordSearch/Info.plist;
@@ -571,7 +574,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordSearch/Info.plist;
