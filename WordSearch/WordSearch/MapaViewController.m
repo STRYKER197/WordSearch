@@ -135,7 +135,7 @@ NSDate *timerStarted;
 
 - (void)decrementTimer:(NSTimer *)timer
 {
-    NSLog(@"Tempo: %@", lblTime.text);
+//    NSLog(@"Tempo: %@", lblTime.text);
     counter = counter - 1;
     lblTime.text = [NSString stringWithFormat:@"%d",counter];
     
