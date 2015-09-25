@@ -488,11 +488,10 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-eJ-8UE">
                                 <rect key="frame" x="16" y="56" width="343" height="631"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através da nossa página do facebook World Search App.
+                                <string key="text">We hope you enjoy our project, we are working continuously to make your experience better while playing the game. If you have any doubt, contact our team on the Facebook page World Search App.
 
-Desenvolvedor: Rodrigo Silva
-Designer: Michel Aragão Paz
-</string>
+Developer: Rodrigo Silva
+Designer: Michel Aragão Paz</string>
                                 <color key="textColor" red="0.34509803921568627" green="0.55294117647058827" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AkzidenzGroteskBQ-Reg" family="Akzidenz-Grotesk BQ" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
