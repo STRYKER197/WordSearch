@@ -38,7 +38,8 @@
 
     NSLog(@"%@", self.restorationIdentifier);
     //Se o idioma não for portugues ou ingles o jogo não irá abrir
-    if (!([language isEqualToString:@"pt"] || [language isEqualToString:@"en"] || [language isEqualToString:@"pt-BR"])) {
+    if (!([language isEqualToString:@"pt"] || [language isEqualToString:@"en"] || [language isEqualToString:@"pt-BR"] || [language isEqualToString:@"en-US"])) {
+
         self.view.hidden = YES;
         NSLog(@"Idioma:%@", language);
         NSString *msg = @"Este jogo só funciona se o idioma do seu dispositivo estiver em inglês ou português";

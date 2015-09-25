@@ -23,6 +23,8 @@
 		F6976EB81B03046F0048B25C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EB71B03046F0048B25C /* AboutViewController.m */; };
 		F6976EBB1B03B6720048B25C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F6976EBA1B03B6720048B25C /* Score.m */; };
 		F6A31C691B01508900763793 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A31C681B01508900763793 /* CustomAnnotation.m */; };
+		F6DEC8181B82774000A8B8FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6DEC81A1B82774000A8B8FB /* InfoPlist.strings */; };
+		F6DEC81D1B82774000A8B8FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6DEC81F1B82774000A8B8FB /* InfoPlist.strings */; };
 		F6E687A81B01334D006D3FAE /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6879E1B01334D006D3FAE /* SCLAlertView.m */; };
 		F6E687A91B01334D006D3FAE /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A01B01334D006D3FAE /* SCLAlertViewResponder.m */; };
 		F6E687AA1B01334D006D3FAE /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E687A21B01334D006D3FAE /* SCLAlertViewStyleKit.m */; };
@@ -73,9 +75,12 @@
 		F6976EB91B03B6720048B25C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		F6976EBA1B03B6720048B25C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		F69EB15D1B121ECA002B0577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F69EB15F1B121EE5002B0577 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		F6A31C671B01508900763793 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F6A31C681B01508900763793 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		F6DCA9D71B82590700F47181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F6DCA9D81B82595700F47181 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		F6DEC8191B82774000A8B8FB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F6DEC81E1B82774000A8B8FB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F6E6879D1B01334D006D3FAE /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
 		F6E6879E1B01334D006D3FAE /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
 		F6E6879F1B01334D006D3FAE /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
@@ -264,6 +269,7 @@
 		F6E700591AFD373C00A48FD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6DEC81F1B82774000A8B8FB /* InfoPlist.strings */,
 				F6E7005A1AFD373C00A48FD3 /* Info.plist */,
 				F6E7005B1AFD373C00A48FD3 /* main.m */,
 			);
@@ -282,6 +288,7 @@
 		F6E700761AFD373C00A48FD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6DEC81A1B82774000A8B8FB /* InfoPlist.strings */,
 				F6E700771AFD373C00A48FD3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -378,7 +385,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = F6E7004D1AFD373C00A48FD3;
@@ -406,6 +412,7 @@
 				F6953FB21B0ED7960064D317 /* acerto.mp3 in Resources */,
 				0A1CE39A1B01599600D78CCD /* AkzidenzGrotesk-MediumCond.otf in Resources */,
 				0A1CE3841B01599600D78CCD /* AkzidenzGrotesk-Cond.otf in Resources */,
+				F6DEC81D1B82774000A8B8FB /* InfoPlist.strings in Resources */,
 				F6E7006A1AFD373C00A48FD3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DEC8181B82774000A8B8FB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,11 +471,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F6DEC81A1B82774000A8B8FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6DEC8191B82774000A8B8FB /* pt-BR */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6DEC81F1B82774000A8B8FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6DEC81E1B82774000A8B8FB /* pt-BR */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F6E700661AFD373C00A48FD3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F69EB15D1B121ECA002B0577 /* Base */,
-				F69EB15F1B121EE5002B0577 /* pt */,
+				F6DCA9D71B82590700F47181 /* en */,
+				F6DCA9D81B82595700F47181 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -511,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -549,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,0 +1,43 @@
+/* Class = "UIButton"; normalTitle = "Menu"; ObjectID = "5as-qo-Ncv"; */
+"5as-qo-Ncv.normalTitle" = "Menu";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "7sQ-Zr-56e"; */
+"7sQ-Zr-56e.text" = "Pontos";
+
+/* Class = "UITextView"; text = "Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através da nossa página do facebook World Search App.\n\nDesenvolvedor: Rodrigo Silva\nDesigner: Michel Aragão Paz\n"; ObjectID = "8Y4-eJ-8UE"; */
+"8Y4-eJ-8UE.text" = "Esperamos que goste do nosso projeto, estamos trabalhando continuamente para melhorar sua experiência durante a utilização do aplicativo, se estiver com qualquer dúvida, entre em contato com a nossa equipe através da nossa página do facebook World Search App.
+
+Desenvolvedor: Rodrigo Silva
+Designer: Michel Aragão Paz
+";
+
+/* Class = "UIViewController"; title = "About"; ObjectID = "74v-JP-cly"; */
+"74v-JP-cly.title" = "Sobre";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "AWB-cW-0nx"; */
+"AWB-cW-0nx.normalTitle" = "Sobre";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "E4P-Ob-Sic"; */
+"E4P-Ob-Sic.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "H5M-eM-a8Z"; */
+"H5M-eM-a8Z.text" = "0";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "Smk-6f-pdd"; */
+"Smk-6f-pdd.text" = "25";
+
+/* Class = "UIButton"; normalTitle = "Leaderboards"; ObjectID = "VOQ-i0-4wj"; */
+"VOQ-i0-4wj.normalTitle" = "Pontuações";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "eY4-h3-Oza"; */
+"eY4-h3-Oza.normalTitle" = "Iniciar Jogo";
+
+/* Class = "UILabel"; text = "World Search"; ObjectID = "p2O-Vm-bhp"; */
+"p2O-Vm-bhp.text" = "World Search";
+
+/* Class = "UILabel"; text = "Busque o país: "; ObjectID = "uhm-ME-srJ"; */
+"uhm-ME-srJ.text" = "Search the Country: ";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "zIm-6M-nSd"; */
+"zIm-6M-nSd.text" = "Sobre";
+
