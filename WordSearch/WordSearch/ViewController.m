@@ -30,7 +30,11 @@
     NSLog(@"%@", targetPath);
     
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSString *userLocale = [[NSLocale currentLocale] localeIdentifier];
+    NSString *userLanguage = [userLocale substringToIndex:2];
     
+    NSLog(@"Região: %@ Idioma: %@ Linguagem: %@", userLocale, language, userLanguage);
+    NSLog(@"\n");
     // Inicializa a variavel de controle
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:@"0" forKey:@"inMap"];
@@ -38,7 +42,7 @@
 
     NSLog(@"%@", self.restorationIdentifier);
     //Se o idioma não for portugues ou ingles o jogo não irá abrir
-    if (!([language isEqualToString:@"pt"] || [language isEqualToString:@"en"] || [language isEqualToString:@"pt-BR"] || [language isEqualToString:@"en-US"])) {
+    if (!([userLanguage isEqualToString:@"pt"] || [userLanguage isEqualToString:@"en"])) {
 
         self.view.hidden = YES;
         NSLog(@"Idioma:%@", language);
